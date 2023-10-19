@@ -1,0 +1,108 @@
+.slideDown {
+  transform: translateY(0);
+}
+
+.slideUp {
+  transform: translateY(-50px);
+}
+
+nav {
+  background: #333;
+  color: #fff;
+  height: 50px;
+  line-height: 50px;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+
+  .container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      padding: 0 15px;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .logo {
+      color: #fff;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+      &:focus {
+        outline: none;
+      }
+      .bar {
+        height: 3px;
+        width: 25px;
+        background-color: #fff;
+        margin: 5px auto;
+      }
+    }
+
+    .nav-items {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+
+      &.open {
+        display: flex;
+      }
+    }
+  }
+}
+
+// Add responsive styles for smaller screens
+@media screen and (max-width: 768px) {
+  nav {
+    .container {
+      .hamburger {
+        display: block;
+      }
+
+      .nav-items {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        background-color: #333;
+        top: 50px;
+        left: 0;
+        a {
+          padding: 15px;
+          width: 100%;
+          text-align: center;
+          &:hover {
+            background-color: #555;
+          }
+        }
+      }
+    }
+
+    // Show navigation items when hamburger button is clicked
+    &.slideDown {
+      .nav-items {
+        display: flex;
+      }
+    }
+  }
+}
+
+
