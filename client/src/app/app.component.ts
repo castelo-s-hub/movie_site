@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, HostListener} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'client';
+  isScrolled: boolean = false;
+  isMenuOpen: boolean = false;
+
+  @HostListener('window:scroll', [])
+  onScroll(): void {
+    this.isScrolled = window.scrollY > 100;
+  }
+
+  toggleMenu(): void {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
 }
