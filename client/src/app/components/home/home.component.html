@@ -1,5 +1,5 @@
-<div class="top-bar">
-  <div class="d-flex align-items-center justify-content-between w-100">
+<div class="d-none d-md-flex top-bar">
+  <div class="d-md-flex align-items-center justify-content-between w-100">
     <div class="d-flex align-items-center top-item">
       <i class="fa fa-map-marker" aria-hidden="true"></i>
       <span>6123 Los angles, 1922</span>
@@ -16,6 +16,32 @@
     </div>
   </div>
 </div>
+
+<nav>
+  <div class="container">
+    <div class="logo">
+      <img src="./assets/images/logo.png" alt="logo">
+    </div>
+    <button class="hamburger" (click)="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </button>
+    <div class="nav-items" [class.open]="isMenuOpen">
+      <a routerLink="/">Home</a>
+      <a routerLink="/about">About Us</a>
+      <a routerLink="/services">Pages &blacktriangledown;</a>
+      <a routerLink="/services">Blog</a>
+      <a routerLink="/contact">Contact</a>
+    </div>
+    <div class="d-none d-md-block">
+      <button class="nav-button">
+        Get a quote &bkarow;
+      </button>
+    </div>
+  </div>
+</nav>
+
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur dicta dolorum enim expedita molestiae
   perspiciatis quis tempora? Alias amet aspernatur at commodi consectetur, cum, dicta excepturi fugit impedit inventore
   ipsam iusto minus molestiae natus nesciunt odio odit optio provident quaerat quo quod, quos rem repellat sit sunt
