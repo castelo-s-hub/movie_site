@@ -12,7 +12,7 @@ export class AppComponent {
 
   @HostListener('window:scroll', [])
   onScroll(): void {
-    this.isScrolled = window.scrollY > 100;
+    this.isScrolled = window.scrollY > 200;
   }
 
   toggleMenu(): void {
