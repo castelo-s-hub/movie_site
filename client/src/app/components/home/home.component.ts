@@ -1,4 +1,5 @@
 import {Component, HostListener, OnInit} from '@angular/core';
+import VanillaTilt from 'vanilla-tilt';
 
 @Component({
   selector: 'app-home',
@@ -16,6 +17,7 @@ export class HomeComponent implements OnInit{
   }
 
   ngOnInit() {
+    this.vanillaTiltAnimation()
   }
 
   @HostListener('window:scroll', ['$event'])
@@ -24,7 +26,6 @@ export class HomeComponent implements OnInit{
 
     if (scrollPosition >= this.sec2counter) {
       this.startCounter();
-      console.log(scrollPosition)
     }
   }
 
@@ -41,4 +42,16 @@ export class HomeComponent implements OnInit{
   toggleMenu(): void {
     this.isMenuOpen = !this.isMenuOpen;
   }
+
+  vanillaTiltAnimation() {
+    const element = document.querySelector('.sec-3-image') as HTMLElement;
+
+    VanillaTilt.init(element, {
+      max: 25,
+      speed: 400,
+      glare: false,
+      'max-glare': 0.5
+    });
+  }
+
 }
