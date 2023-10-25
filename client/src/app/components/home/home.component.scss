@@ -281,6 +281,68 @@ nav {
   }
 }
 
+.sec-5{
+  margin: 3vw 0;
+  position: relative;
+
+  .div-5-cont-1{
+    flex: 1;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img{
+      width: 100%;
+    }
+
+    .popup-video{
+      position: absolute;
+      top: calc(50% - 63px);
+      left: calc(50% - 63px);
+      outline: none;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+
+      .play-btn{
+        position: absolute;
+        width: 127px;
+        height: 127px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg{
+          fill: rgba(255,255,255,.7);
+          transition: fill .3s ease-out;
+        }
+      }
+    }
+  }
+  .div-5-cont-1:hover{
+    .popup-video{
+      .play-btn{
+        svg{
+          fill: rgba(255,255,255,1);
+        }
+      }
+    }
+  }
+
+  iframe{
+    position: fixed;
+    width: 90vw;
+    min-height: 500px;
+    top: 100px;
+    left: 50px;
+    display: none;
+  }
+  iframe.show {
+    display: block;
+  }
+}
+
 // Add responsive styles for smaller screens
 @media screen and (max-width: 768px) {
   nav {
