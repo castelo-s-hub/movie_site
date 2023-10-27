@@ -193,8 +193,9 @@
         </button>
         <img src="./assets/images/sec-5-3.jpg" alt="banner">
       </div>
-      <div class="div-5-cont-1">
-        <button class="popup-video">
+      <div>
+        <div class="div-5-cont-1">
+          <button class="popup-video">
                               <span class="play-btn" (click)="loadVideo('https://www.youtube.com/embed/yfK5PRth85Y?si=yYI_pyf-Y4OK9xNa')">
                                  <svg fill="#ffffff" height="200px" width="200px" version="1.1" id="Layer_1"
                                       xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -205,9 +206,12 @@
                                    id="XMLID_230_"
                                    d="M165,0C74.019,0,0,74.019,0,165s74.019,165,165,165s165-74.019,165-165S255.981,0,165,0z M165,300 c-74.44,0-135-60.561-135-135S90.56,30,165,30s135,60.561,135,135S239.439,300,165,300z"></path> </g> </g></svg>
                               </span>
-        </button>
-        <img src="./assets/images/sec-5-4.jpg" alt="banner">
+          </button>
+          <img src="./assets/images/sec-5-4.jpg" alt="banner">
+        </div>
+        <h1 style="padding: 0 15px; color: white; font-weight: 600;">Your Hands Get Ready for a Cinematic Journey</h1>
       </div>
+
     </div>
 
     <iframe width="560" height="315" [src]="videoSrc" [ngClass]="{'show': popupVideo}"
