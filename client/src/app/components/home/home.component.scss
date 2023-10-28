@@ -352,6 +352,64 @@ nav {
   }
 }
 
+.sec-9{
+  background-image: url("../../../assets/images/sec-9-bg.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  min-height: 400px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .sec-9-cont, .sec-9-image{
+    flex: 1;
+  }
+
+  .sec-9-cont{
+    height: 100%;
+    width: 100%;
+
+    .title-1{
+      margin-bottom: 2.5vw;
+    }
+
+    input{
+      width: 100%;
+      outline: 1px solid white;
+      border: none;
+      height: 50px;
+      background-color: #0f172a;
+      color: white;
+      padding-left: 15px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+
+    .nav-button{
+      width: 250px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+  }
+
+  .sec-9-image{
+    height: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    position: relative;
+
+    img{
+      width: 100%;
+    }
+  }
+}
+
 // Add responsive styles for smaller screens
 @media screen and (max-width: 768px) {
   nav {
