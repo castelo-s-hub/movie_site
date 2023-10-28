@@ -344,6 +344,14 @@ nav {
   }
 }
 
+.sec-7{
+  margin: 2vw 0;
+
+  .sec-7-cont{
+    padding: 15px;
+  }
+}
+
 // Add responsive styles for smaller screens
 @media screen and (max-width: 768px) {
   nav {
