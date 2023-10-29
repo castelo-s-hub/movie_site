@@ -55,6 +55,7 @@ export class HomeComponent implements OnInit{
   vanillaTiltAnimation() {
     const element = document.querySelector('.sec-3-image') as HTMLElement;
     const element2 = document.querySelectorAll('.div-5-cont-1');
+    const element3 = document.querySelector('.sec-9-image-vanilla');
 
     VanillaTilt.init(element, {
       max: 25,
@@ -65,6 +66,14 @@ export class HomeComponent implements OnInit{
 
     // @ts-ignore
     VanillaTilt.init(element2, {
+      max: 15,
+      speed: 100,
+      glare: false,
+      'max-glare': 0.5
+    })
+
+    // @ts-ignore
+    VanillaTilt.init(element3, {
       max: 15,
       speed: 100,
       glare: false,
