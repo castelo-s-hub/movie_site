@@ -25,6 +25,28 @@
     transform: translateX(0);
   }
 }
+@keyframes arrowMove {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes imageAnimation1 {
+  0% {
+    -webkit-filter: blur(0) brightness(70%);
+  }
+  50% {
+    -webkit-filter: blur(3px) brightness(100%);
+  }
+  100% {
+    -webkit-filter: blur(0) brightness(80%);
+  }
+}
 .top-bar{
   min-height: 50px;
   width: 100%;
@@ -120,7 +142,7 @@ nav {
   border: 2px solid #e27614;
   outline: none;
   padding: 5px 30px;
-  border-radius: 16px;
+  border-radius: 8px;
   background-color: #e27614;
   color: white;
   transition: background-color .3s ease-out;
@@ -384,11 +406,11 @@ nav {
       color: white;
       padding-left: 15px;
       margin-right: 10px;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
     }
 
     .nav-button{
-      width: 250px;
+      min-width: 180px;
       height: 50px;
       display: flex;
       align-items: center;
@@ -412,6 +434,111 @@ nav {
 
     img{
       width: 100%;
+    }
+  }
+}
+
+.sec-10{
+  margin-top: 10vw;
+  margin-bottom: 2vw;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+
+  .sec-10-title-cont{
+    max-width: 50%;
+  }
+
+  .nav-button{
+    height: 50px;
+  }
+
+  .sec-10-cont{
+    margin: 2vw 0;
+
+    .card{
+      background-color: #1b2335;
+      color: white;
+      border-radius: 0;
+
+      .card-img-top{
+        overflow: hidden;
+        border-radius: 0;
+      }
+
+      .card-img-top img{
+        width: 100%;
+        height: 100%;
+        -webkit-filter: brightness(70%);
+        transition: .3s ease-in-out;
+      }
+
+      .card-body{
+        .sec-10-card-date{
+          width: 60px;
+          height: 60px;
+          border: 1px solid white;
+          margin-right: 10px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          transition: border .3s ease-out;
+        }
+
+        .card-text{
+          margin-top: 10px;
+          margin-bottom: 15px;
+          font-weight: 600;
+          cursor: pointer;
+          position: relative;
+        }
+        .card-text::before{
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 100%;
+          border-bottom: 2px solid white;
+          transition: all .3s ease-out;
+        }
+        .card-text:hover::before, .card-text:focus::before{
+          right: 0%;
+        }
+
+        .card-btn{
+          color: white;
+          text-decoration: none;
+          font-weight: 600;
+          display: flex;
+        }
+        .card-btn:hover{
+          .arrow{
+            animation: arrowMove .5s ease-in-out;
+          }
+        }
+
+        .arrow{
+          margin-left: 7px;
+          margin-top: 2px;
+          width: 30px;
+          transition: color .3s ease-out;
+        }
+      }
+    }
+    .card:hover{
+      .card-img-top img{
+        animation: imageAnimation1 .4s ease-in-out;
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+      }
+      .card-body .sec-10-card-date{
+        border: 1px solid #e27614;
+      }
+      .card-body .arrow{
+        color: #e27614;
+      }
     }
   }
 }
@@ -488,6 +615,15 @@ nav {
 
   .sec-9 .sec-9-image .sec-9-image-vanilla{
     width: 100%;
+  }
+
+  .sec-10{
+    margin-top: 400px;
+    min-height: 400px;
+
+    .sec-10-title-cont{
+      max-width: 100%;
+    }
   }
 }
 
