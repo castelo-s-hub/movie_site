@@ -1,4 +1,4 @@
-import {Component, HostListener, OnInit, ChangeDetectorRef, ElementRef, Renderer2} from '@angular/core';
+import {Component, HostListener, OnInit, ChangeDetectorRef, Renderer2, ElementRef} from '@angular/core';
 import VanillaTilt from 'vanilla-tilt';
 import {DomSanitizer, SafeResourceUrl} from "@angular/platform-browser";
 
@@ -20,19 +20,23 @@ export class HomeComponent implements OnInit{
   carouselItems = [
     {
       image: 'https://template.wphix.com/dhora-prv/dhora/assets/img/criteria/img-1.jpg',
-      title: 'Title 1'
+      title: 'Care For You',
+      date: '2020,Action,Drama'
     },
     {
       image: 'https://template.wphix.com/dhora-prv/dhora/assets/img/criteria/img-2.jpg',
-      title: 'Title 2'
+      title: 'Jeen Leader',
+      date: '2020,Action,Drama'
     },
     {
       image: 'https://template.wphix.com/dhora-prv/dhora/assets/img/criteria/img-3.jpg',
-      title: 'Title 3'
+      title: 'Flash Man',
+      date: '2020,Action,Drama'
     },
     {
       image: 'https://template.wphix.com/dhora-prv/dhora/assets/img/criteria/img-4.jpg',
-      title: 'Title 4'
+      title: 'Frank Herbert',
+      date: '2020,Action,Drama'
     }
   ];
   currentIndex = 0;
@@ -55,7 +59,13 @@ export class HomeComponent implements OnInit{
 
   @HostListener('document:click', ['$event'])
   onClick(event: Event): void {
-    this.popupVideo = !this.popupVideo;
+    // console.log(event.target);
+    // console.log(!this.elementRef.nativeElement.contains(event.target));
+    let target = event.target as HTMLElement;
+    if (!target.matches("path")) {
+      this.popupVideo = false;
+      this.cdr.detectChanges();
+    }
   }
 
   startCounter(): void {
@@ -104,6 +114,7 @@ export class HomeComponent implements OnInit{
   loadVideo(video: string) {
     this.videoSrc = this.sanitizer.bypassSecurityTrustResourceUrl(video);
     this.cdr.detectChanges();
+    this.popupVideo = true;
   }
 
   prevSlide(): void {

@@ -367,24 +367,89 @@ nav {
 }
 
 .sec-6{
+  margin: 5vw 0;
+
+  .sec-6-cont{
+    button {
+      margin-top: 10px;
+      margin-bottom: 20px;
+      margin-right: 20px;
+      background-color: #e27614;
+      color: white;
+      border: 2px solid #e27614;
+      outline: none;
+      border-radius: 100%;
+      width: 58px;
+      height: 58px;
+      transition: background-color .3s ease-out;
+    }
+    button:hover{
+      background-color: transparent;
+      color: #e27614;
+    }
+
+    .card-btn{
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      display: flex;
+      transition: color .3s ease-out;
+    }
+    .card-btn:hover{
+      color: #e27614;
+      .arrow{
+        animation: arrowMove .5s ease-in-out;
+      }
+    }
+
+    .arrow{
+      margin-left: 7px;
+      margin-top: 2px;
+      width: 30px;
+      transition: color .3s ease-out;
+    }
+  }
   .carousel-container {
     width: 100%;
     overflow: hidden;
     position: relative;
 
     .carousel {
+      width: 1400px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       transition: transform 0.3s ease-in-out;
 
       .carouselItem {
-        width: 300px;
-      }
-    }
+        width: 350px;
+        margin: 0 15px;
+        overflow: hidden;
 
-    button {
-      margin-top: 10px;
+        img{
+          width: 100%;
+        }
+        img:hover{
+          cursor: pointer;
+          transform: scale(1.05);
+          -webkit-transform: scale(1.05);
+          -ms-transform: scale(1.05);
+
+          transition: transform .3s ease-in-out;
+        }
+
+        h6,h3{
+          color: white;
+          transition: color .3s ease-out;
+        }
+        h6{
+          margin: 15px 0;
+        }
+        h3:hover{
+          color: #e27614;
+          cursor: pointer;
+        }
+      }
     }
   }
 }
