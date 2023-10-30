@@ -366,6 +366,29 @@ nav {
   }
 }
 
+.sec-6{
+  .carousel-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    .carousel {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: transform 0.3s ease-in-out;
+
+      .carouselItem {
+        width: 300px;
+      }
+    }
+
+    button {
+      margin-top: 10px;
+    }
+  }
+}
+
 .sec-7{
   margin: 2vw 0;
 

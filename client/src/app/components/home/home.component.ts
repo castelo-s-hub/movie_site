@@ -17,6 +17,26 @@ export class HomeComponent implements OnInit{
   videoSrc: SafeResourceUrl = '';
   popupVideo: boolean = false;
 
+  carouselItems = [
+    {
+      image: 'https://template.wphix.com/dhora-prv/dhora/assets/img/criteria/img-1.jpg',
+      title: 'Title 1'
+    },
+    {
+      image: 'https://template.wphix.com/dhora-prv/dhora/assets/img/criteria/img-2.jpg',
+      title: 'Title 2'
+    },
+    {
+      image: 'https://template.wphix.com/dhora-prv/dhora/assets/img/criteria/img-3.jpg',
+      title: 'Title 3'
+    },
+    {
+      image: 'https://template.wphix.com/dhora-prv/dhora/assets/img/criteria/img-4.jpg',
+      title: 'Title 4'
+    }
+  ];
+  currentIndex = 0;
+
   constructor(private sanitizer: DomSanitizer, private cdr: ChangeDetectorRef, private elementRef: ElementRef, private renderer: Renderer2) {
   }
 
@@ -84,5 +104,13 @@ export class HomeComponent implements OnInit{
   loadVideo(video: string) {
     this.videoSrc = this.sanitizer.bypassSecurityTrustResourceUrl(video);
     this.cdr.detectChanges();
+  }
+
+  prevSlide(): void {
+    this.currentIndex = (this.currentIndex - 1 + this.carouselItems.length) % this.carouselItems.length;
+  }
+
+  nextSlide(): void {
+    this.currentIndex = (this.currentIndex + 1) % this.carouselItems.length;
   }
 }
