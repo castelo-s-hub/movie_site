@@ -279,7 +279,24 @@
   </div>
 </div>
 
-<div class="sec-8"></div>
+<div class="sec-8">
+  <div class="container">
+    <div class="carousel-container2"
+         (mousedown)="onMouseDown($event)"
+         (document:mouseup)="onMouseUp()"
+         (document:mousemove)="onMouseMove($event)">
+      <div class="carousel"
+           [style.transform]="'translateX(-' + currentIndex * (itemWidth + margin) + 'px)'">
+        <div *ngFor="let item of carouselItems2" class="carouselItem">
+          <div class="sec-8-image">
+            <img src="{{item.image}}" alt="{{item.title}}">
+          </div>
+          <h3>{{item.title}}</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="sec-9">
   <div class="container">

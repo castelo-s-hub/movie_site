@@ -1,4 +1,4 @@
-import {Component, HostListener, OnInit, ChangeDetectorRef, Renderer2, ElementRef} from '@angular/core';
+import {ChangeDetectorRef, Component, ElementRef, HostListener, OnInit, Renderer2} from '@angular/core';
 import VanillaTilt from 'vanilla-tilt';
 import {DomSanitizer, SafeResourceUrl} from "@angular/platform-browser";
 
@@ -41,11 +41,44 @@ export class HomeComponent implements OnInit{
   ];
   currentIndex = 0;
 
+  carouselItems2 = [
+    {
+      image: 'https://template.wphix.com/dhora-prv/dhora/assets/img/movies/img-1.jpg',
+      title: 'Schindler\'s List'
+    },
+    {
+      image: 'https://template.wphix.com/dhora-prv/dhora/assets/img/movies/img-2.jpg',
+      title: 'The Terminator'
+    },
+    {
+      image: 'https://template.wphix.com/dhora-prv/dhora/assets/img/movies/img-3.jpg',
+      title: 'Movie Verse'
+    },
+    {
+      image: 'https://template.wphix.com/dhora-prv/dhora/assets/img/movies/img-4.jpg',
+      title: 'You\'ll Love Us'
+    },
+    {
+      image: 'https://template.wphix.com/dhora-prv/dhora/assets/img/movies/img-5.jpg',
+      title: 'Back To The Future'
+    }
+  ]; // Your carousel items
+  currentIndex2 = 0;
+  isDragging = false;
+  startPosition = 0;
+  offset = 0;
+  itemWidth = 460; // Width of each carousel item
+  margin = 35; // Margin between carousel items
+
   constructor(private sanitizer: DomSanitizer, private cdr: ChangeDetectorRef, private elementRef: ElementRef, private renderer: Renderer2) {
   }
 
   ngOnInit() {
     this.vanillaTiltAnimation()
+    // Calculate total width of the carousel
+    const totalWidth = this.carouselItems2.length * (this.itemWidth + this.margin);
+    const carousal = document.querySelector('.carousel-container2') as HTMLElement;
+    carousal.style.width = totalWidth + 'px';
   }
 
   @HostListener('window:scroll', ['$event'])
@@ -59,8 +92,6 @@ export class HomeComponent implements OnInit{
 
   @HostListener('document:click', ['$event'])
   onClick(event: Event): void {
-    // console.log(event.target);
-    // console.log(!this.elementRef.nativeElement.contains(event.target));
     let target = event.target as HTMLElement;
     if (!target.matches("path")) {
       this.popupVideo = false;
@@ -85,7 +116,8 @@ export class HomeComponent implements OnInit{
   vanillaTiltAnimation() {
     const element = document.querySelector('.sec-3-image') as HTMLElement;
     const element2 = document.querySelectorAll('.div-5-cont-1');
-    const element3 = document.querySelector('.sec-9-image-vanilla');
+    const element3 = document.querySelector('.sec-9-image-vanilla') as HTMLElement;
+    const element4 = document.querySelectorAll('.sec-8-image');
 
     VanillaTilt.init(element, {
       max: 25,
@@ -102,11 +134,18 @@ export class HomeComponent implements OnInit{
       'max-glare': 0.5
     })
 
-    // @ts-ignore
     VanillaTilt.init(element3, {
       max: 15,
       speed: 100,
       glare: false,
+      'max-glare': 0.5
+    })
+
+    // @ts-ignore
+    VanillaTilt.init(element4, {
+      max: 15,
+      speed: 100,
+      glare: true,
       'max-glare': 0.5
     })
   }
@@ -127,5 +166,38 @@ export class HomeComponent implements OnInit{
     this.currentIndex = (this.currentIndex + 1) % this.carouselItems.length;
     this.cdr.detectChanges();
     console.log(this.currentIndex);
+  }
+
+  onMouseDown(event: MouseEvent): void {
+    this.isDragging = true;
+    this.startPosition = event.clientX - this.offset;
+  }
+
+  onMouseMove(event: MouseEvent): void {
+    if (this.isDragging) {
+      this.offset = event.clientX - this.startPosition;
+      this.cdr.detectChanges();
+      this.updateCarouselPosition();
+    }
+  }
+
+  onMouseUp(): void {
+    this.isDragging = false;
+    // Calculate the new current index based on the offset
+    this.currentIndex2 = Math.round(this.offset / (this.itemWidth + this.margin));
+    this.cdr.detectChanges();
+    this.updateCarouselPosition();
+  }
+
+  updateCarouselPosition(): void {
+    const minOffset = 0;
+    const maxOffset = -((this.carouselItems2.length - 1) * (this.itemWidth + this.margin));
+
+    // Ensure the offset stays within the bounds of the carousel
+    this.offset = Math.max(maxOffset, Math.min(minOffset, this.offset));
+
+    // Calculate the new current index based on the offset
+    this.currentIndex2 = Math.round(this.offset / (this.itemWidth + this.margin));
+    this.cdr.detectChanges();
   }
 }
