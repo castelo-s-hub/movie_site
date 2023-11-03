@@ -119,9 +119,13 @@ export class HomeComponent implements OnInit{
 
   prevSlide(): void {
     this.currentIndex = (this.currentIndex - 1 + this.carouselItems.length) % this.carouselItems.length;
+    this.cdr.detectChanges();
+    console.log(this.currentIndex);
   }
 
   nextSlide(): void {
     this.currentIndex = (this.currentIndex + 1) % this.carouselItems.length;
+    this.cdr.detectChanges();
+    console.log(this.currentIndex);
   }
 }
