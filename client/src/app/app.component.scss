@@ -1,3 +1,15 @@
+@keyframes arrowMove {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(8px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 .slideDown {
   transform: translateY(0);
 }
@@ -89,6 +101,118 @@ nav {
       background-color: transparent;
       outline: #e27614;
     }
+  }
+}
+
+footer{
+  i{
+    color: #e27614;
+    margin: 10px;
+    cursor: pointer;
+    transition: color .3s ease-out;
+  }
+  i:hover{
+    color: white;
+  }
+  hr{
+    color: #fff;
+  }
+
+  h4, h5{
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    transition: color .3s ease-out;
+  }
+  h5:hover{
+    color: #e27614;
+    cursor: pointer;
+  }
+
+  p{
+    color: #fff;
+    margin: 30px 0;
+  }
+
+  .h-hr-top{
+    width: 2px;
+    height: 30%;
+    background-color: #e27614;
+  }
+  .h-hr-bottom{
+    width: 2px;
+    height: 60%;
+    background-color: #fff;
+  }
+
+  a{
+    color: white;
+    text-decoration: none;
+    margin: 15px 0;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    width: max-content;
+  }
+  a::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 100%;
+    border-bottom: 1px solid white;
+    transition: all .3s ease-out;
+  }
+  a:hover::before, a:focus::before{
+    right: 0;
+  }
+
+  .input-group{
+    height: 54px!important;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #1d2943;
+    border-radius: 5px;
+
+    .form-control{
+      background-color: transparent;
+      outline: none;
+      border: none!important;
+      color: white;
+      border-radius: 0!important;
+    }
+    .form-control:focus{
+      border: none!important;
+      outline: none!important;
+    }
+
+    button{
+      background-color: #e27614;
+      height: 48px;
+      width: 48px;
+      border-radius: 5px!important;
+
+      pre{
+        color: white;
+        font-weight: 700;
+        font-size: 18px;
+        margin: 0;
+        padding: 0;
+      }
+      pre:hover{
+        animation: arrowMove .5s ease-in 1;
+      }
+    }
+  }
+
+  span, pre{
+    color: #aaa;
+    transition: color .3s ease-out;
+  }
+  span:hover{
+    color: #e27614;
+    cursor: pointer;
   }
 }
 
