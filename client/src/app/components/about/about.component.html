@@ -1,0 +1,36 @@
+<mat-drawer-container class="about-drawer-container">
+  <mat-drawer #drawer mode="over" position="end">I'm a drawer</mat-drawer>
+  <mat-drawer-content>
+    <div class="top-bar">
+      <div class="container">
+        <div class="d-flex flex-column align-items-center justify-content-between w-100">
+          <div class="top-bar-content"></div>
+          <div class="nav-bar">
+            <nav>
+              <div class="container">
+                <div class="logo">
+                  <img src="./assets/images/logo.png" alt="logo">
+                </div>
+                <button class="hamburger" (click)="toggleMenu()">
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+                </button>
+                <div class="nav-items" [class.open]="isMenuOpen">
+                  <a routerLink="/">Home</a>
+                  <a routerLink="/about">About Us</a>
+                  <a routerLink="/pages">Pages &blacktriangledown;</a>
+                  <a routerLink="/blog">Blog</a>
+                  <a routerLink="/contact">Contact</a>
+                </div>
+                <div class="d-none d-md-block">
+                  <button class="nav-toggle-button" (click)="drawer.toggle()"><div class="toggle-line-1"></div><div class="toggle-line-2"></div></button>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>
