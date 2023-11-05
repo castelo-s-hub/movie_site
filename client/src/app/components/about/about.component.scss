@@ -62,7 +62,7 @@
           cursor: pointer;
           display: flex;
           flex-direction: column;
-          align-items: end;
+          align-items: flex-end;
           justify-content: center;
 
           .toggle-line-1, .toggle-line-2 {
@@ -106,6 +106,7 @@
 .about-drawer-container {
   width: 100%;
   min-height: 100vh;
+  background-color: #0f172a;
 
   mat-drawer {
     padding: 25px 3vw;
@@ -134,7 +135,7 @@
         outline: none;
 
         .close-icon {
-          font-size: 24px;
+          font-size: 16px;
           font-weight: bold;
           color: white;
           margin: 0;
@@ -190,6 +191,11 @@
       }
       span:hover, span a:hover{
         color: #e27614;
+      }
+
+      hr{
+        width: 100%;
+        color: white;
       }
 
       .social-btn{

@@ -1,5 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Prompt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner&display=swap');
+
 *,
 *::before,
 *::after {
@@ -11,7 +14,58 @@
 body{
   font-family: 'Prompt', sans-serif;
   background-color: #0f172a;
-  color: white;
+
+  h1, h2, h3, h4, h5, h6{
+    color: white;
+    font-weight: bold;
+  }
+
+  h1{
+    font-size: 34px;
+    line-height: 1;
+  }
+  h2{
+    font-size: 30px;
+    line-height: 1.067;
+  }
+  h3{
+    font-size: 24px;
+    line-height: 1.083;
+  }
+  h4{
+    font-size: 20px;
+    line-height: 1.1;
+  }
+  h5{
+    font-size: 18px;
+    line-height: 1.111;
+  }
+  h6{
+    font-size: 16px;
+    line-height: 1.125;
+  }
+
+  @media screen and (max-width: 768px){
+    h1{
+      font-size: 24px;
+    }
+    h2{
+      font-size: 18px;
+    }
+    h3{
+      font-size: 18px;
+    }
+    h4{
+      font-size: 16px;
+    }
+    h5{
+      font-size: 14px;
+    }
+    h6{
+      font-size: 12px;
+    }
+
+  }
 }
 
 .subtitle-1{
@@ -35,6 +89,7 @@ body{
   color: white;
   font-size: 2.8rem;
   font-weight: 650;
+  line-height: 40px;
 }
 
 .p-1{
