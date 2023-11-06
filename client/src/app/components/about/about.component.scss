@@ -247,6 +247,21 @@
 
   mat-drawer-content {
 
+    .nav-button{
+      border: 2px solid #e27614;
+      outline: none;
+      padding: 5px 30px;
+      border-radius: 8px;
+      background-color: #e27614;
+      color: white;
+      transition: background-color .3s ease-out;
+    }
+
+    .nav-button:hover{
+      background-color: transparent;
+      outline: #e27614;
+    }
+
     .main-banner{
       width: 100%;
       min-height: 420px;
@@ -279,6 +294,97 @@
         color: #e27614;
       }
     }
+
+    .sec-2{
+      margin: 10vw 0!important;
+
+      .sec-2-cont{
+        max-width: 50%;
+        padding-left: 2vw;
+      }
+
+      .sec-2-image-wrapper{
+        position: relative;
+
+        .sec-2-image-button{
+          position: absolute;
+          padding: 15px 25px;
+          background-color: #fef3df;
+          z-index: 99;
+          border-radius: 20px;
+          animation: upDown 2s ease-in-out infinite;
+        }
+
+        .sec-2-image{
+          flex: 1;
+          height: 100vh;
+          position: relative;
+          overflow: hidden;
+          padding-bottom: 50px;
+          z-index: 2;
+
+          .image-cover{
+            width: 100%;
+            height: 50px;
+            background-color: #0f172a;
+            position: absolute;
+            z-index: 2;
+          }
+
+          img{
+            width: 100%;
+            height: 100%;
+            transform: skewY(-10deg);
+          }
+        }
+      }
+
+    }
+
+    .sec-3{
+      margin: 2vw 0;
+
+      .sec-3-cont{
+        max-width: 50%;
+        animation: slideInLeft 1s ease-in-out;
+
+        ul li{
+          color: white;
+          font-size: 18px;
+          font-weight: 600;
+          list-style: none;
+          display: flex;
+          align-items: center;
+
+          i{
+            background-color: #e27614;
+            margin-right: 10px;
+            border-radius: 100%;
+            color: #0f172a;
+            font-size: 14px;
+            width: 16px;
+            height: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+      }
+
+      .sec-3-image{
+        max-width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px;
+        animation: slideInRight 1s ease-in-out;
+
+        img{
+          width: 100%;
+        }
+      }
+    }
+
   }
 }
 
@@ -336,6 +442,22 @@
     .main-banner{
       .title-1{
         font-size: 48px!important;
+      }
+    }
+
+    .sec-2{
+      .sec-2-cont{
+        max-width: 100%;
+        padding-left: 0;
+      }
+      .sec-2-image-wrapper .sec-2-image{
+        height: calc(100vh /2);
+      }
+    }
+
+    .sec-3{
+      .sec-3-cont, .sec-3-image{
+        max-width: 100%;
       }
     }
   }
