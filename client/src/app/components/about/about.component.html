@@ -248,5 +248,31 @@
       </div>
     </div>
 
+    <div class="sec-5">
+      <div class="container">
+        <div class="carousel-container"
+             (mousedown)="onMouseDown($event)"
+             (document:mouseup)="onMouseUp()"
+             (document:mousemove)="onMouseMove($event)">
+          <div class="carousel"
+               [style.transform]="'translateX(-' + currentIndex * (itemWidth + margin) + 'px)'">
+            <div *ngFor="let item of carouselItems" class="carouselItem">
+              <div class="sec-5-image">
+                <img src="{{item.image}}" alt="{{item.title}}">
+                <div class="sec-5-image-hover">
+                  <div class="container" style="height: 100%;">
+                    <div class="d-flex flex-column align-items-start justify-content-end" style="height: 100%">
+                      <span>{{item.tag}}</span>
+                      <h4>{{item.title}}</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </mat-drawer-content>
 </mat-drawer-container>
