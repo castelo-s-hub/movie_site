@@ -3,7 +3,7 @@
   color: white;
   height: 100px;
   width: 100%;
-  margin-bottom: 50px;
+  //margin-bottom: 50px;
 
   .top-bar-content, .nav-bar {
     min-height: 50px;
@@ -11,6 +11,7 @@
   }
 
   .nav-bar {
+    //position: absolute;
     nav {
       background: #1b2335;
       color: #fff;
@@ -245,9 +246,39 @@
   }
 
   mat-drawer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+
+    .main-banner{
+      width: 100%;
+      min-height: 420px;
+      background-color: #161c2e;
+      color: white;
+      display: flex;
+      align-items: center;
+      background-image: url("../../../assets/images/about/about-bg.png");
+      background-size: contain;
+      background-position: left;
+      background-repeat: no-repeat;
+
+      .title-1{
+        font-size: 60px;
+      }
+
+      span, pre{
+        height: 50px;
+        display: flex;
+        align-items: center;
+        color: white;
+        margin: 0;
+        padding: 0;
+        font-size: 24px;
+        cursor: pointer;
+        transition: color .3s ease-out;
+      }
+
+      pre:hover{
+        color: #e27614;
+      }
+    }
   }
 }
 
@@ -297,6 +328,14 @@
         .nav-items {
           display: flex;
         }
+      }
+    }
+  }
+
+  mat-drawer-container{
+    .main-banner{
+      .title-1{
+        font-size: 48px!important;
       }
     }
   }
