@@ -324,7 +324,82 @@
     }
 
     .main-wrapper{
-      margin: 10vw 0;
+      margin: 6vw 0;
+
+      .container-1{
+        width: 100%;
+        border: 2px solid #555555;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 20px;
+        margin-bottom: 40px;
+
+        .input-group{
+          height: 54px!important;
+          align-items: center;
+          justify-content: center;
+          border: 1px solid #1d2943;
+          border-radius: 0!important;
+
+          .form-control{
+            height: 100%!important;
+            background-color: transparent;
+            outline: none;
+            border: none!important;
+            color: white;
+            border-radius: 0!important;
+          }
+          .form-control:focus{
+            border: 1px solid #e27614!important;
+            outline: none!important;
+            box-shadow: none!important;
+          }
+          .form-control::placeholder{
+            color: white;
+          }
+
+          button{
+            background-color: #e27614;
+            height: 54px;
+            width: 54px;
+            border-radius: 0!important;
+
+            pre{
+              color: white;
+              font-weight: 700;
+              font-size: 18px;
+              margin: 0;
+              padding: 0;
+            }
+          }
+        }
+
+        .cat-button{
+          width: 100%;
+          height: 50px;
+          color: white;
+          border: 2px solid #555555;
+          outline: none;
+          padding: 5px 15px;
+          margin-bottom: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          background-color: transparent;
+          transition: background-color .3s ease-out;
+
+          &:hover{
+            background-color: #e27614;
+            border: 2px solid #e27614;
+          }
+        }
+        .cat-button.active{
+          background-color: #e27614;
+          border: 2px solid #e27614;
+        }
+      }
     }
 
     .sec-7{
