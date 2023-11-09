@@ -37,11 +37,20 @@
 <div class="blog-item">
   <div class="blog-item-banner">
     <img src="./assets/images/blog/banner-2.jpg" alt="blog">
+
+    <div class="video-btn" (click)="playVideo()">
+      <i [ngClass]="play ? 'fa-pause-circle-o':'fa-play'" class="fa fa-play" aria-hidden="true"></i>
+    </div>
     <div class="img-cover">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/yfK5PRth85Y?si=8laMUpxUSKZuX-Vr"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
       <span>Holding</span>
       <span>March 8, 2023</span>
     </div>
   </div>
+
   <div class="blog-item-details">
     <div class="d-flex align-items-center justify-content-center">
       <div class="blogger">
