@@ -326,80 +326,191 @@
     .main-wrapper{
       margin: 6vw 0;
 
-      .container-1{
+      .blog-page-content{
         width: 100%;
-        border: 2px solid #555555;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        padding: 20px;
-        margin-bottom: 40px;
-
-        .input-group{
-          height: 54px!important;
-          align-items: center;
-          justify-content: center;
-          border: 1px solid #1d2943;
-          border-radius: 0!important;
-
-          .form-control{
-            height: 100%!important;
-            background-color: transparent;
-            outline: none;
-            border: none!important;
-            color: white;
-            border-radius: 0!important;
-          }
-          .form-control:focus{
-            border: 1px solid #e27614!important;
-            outline: none!important;
-            box-shadow: none!important;
-          }
-          .form-control::placeholder{
-            color: white;
-          }
-
-          button{
-            background-color: #e27614;
-            height: 54px;
-            width: 54px;
-            border-radius: 0!important;
-
-            pre{
-              color: white;
-              font-weight: 700;
-              font-size: 18px;
-              margin: 0;
-              padding: 0;
-            }
-          }
-        }
-
-        .cat-button{
+        .container-1{
           width: 100%;
-          height: 50px;
-          color: white;
           border: 2px solid #555555;
-          outline: none;
-          padding: 5px 15px;
-          margin-bottom: 10px;
           display: flex;
           align-items: center;
-          justify-content: space-between;
-          background-color: transparent;
-          transition: background-color .3s ease-out;
+          justify-content: center;
+          flex-direction: column;
+          padding: 20px;
+          margin-bottom: 40px;
 
-          &:hover{
+          .input-group{
+            height: 54px!important;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #1d2943;
+            border-radius: 0!important;
+
+            .form-control{
+              height: 100%!important;
+              background-color: transparent;
+              outline: none;
+              border: none!important;
+              color: white;
+              border-radius: 0!important;
+            }
+            .form-control:focus{
+              border: 1px solid #e27614!important;
+              outline: none!important;
+              box-shadow: none!important;
+            }
+            .form-control::placeholder{
+              color: white;
+            }
+
+            button{
+              background-color: #e27614;
+              height: 54px;
+              width: 54px;
+              border-radius: 0!important;
+
+              pre{
+                color: white;
+                font-weight: 700;
+                font-size: 18px;
+                margin: 0;
+                padding: 0;
+              }
+            }
+          }
+
+          .cat-button{
+            width: 100%;
+            height: 50px;
+            color: white;
+            border: 2px solid #555555;
+            outline: none;
+            padding: 5px 15px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: transparent;
+            transition: background-color .3s ease-out;
+
+            &:hover{
+              background-color: #e27614;
+              border: 2px solid #e27614;
+            }
+          }
+          .cat-button.active{
             background-color: #e27614;
             border: 2px solid #e27614;
           }
-        }
-        .cat-button.active{
-          background-color: #e27614;
-          border: 2px solid #e27614;
+
+          .popular-post-wrapper{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: white;
+            margin-bottom: 40px;
+
+            .img-wrapper{
+              width: 100px;
+              overflow: hidden;
+              margin-right: 8px;
+
+              img{
+                width: 100%;
+                transition: .3s ease-out;
+
+                &:hover{
+                  transform: scale(1.1);
+                  cursor: pointer;
+                }
+              }
+            }
+
+            .post-content{
+              width: 100%;
+
+              h5{
+                cursor: pointer;
+                transition: color .3s ease-out;
+
+                &:hover{
+                  color: #e27614!important;
+                }
+              }
+
+              i{
+                margin-right: 5px;
+                color: #e27614;
+              }
+            }
+
+            &:last-child{
+              margin-bottom: 0;
+            }
+          }
+
+          &:last-child{
+            margin-bottom: 0;
+            border: 2px solid #e27614;
+            background-color: #e27614;
+            color: white;
+            padding: 50px;
+            text-align: center;
+
+            i, span, a{
+              font-size: 20px;
+              text-decoration: none;
+              color: white;
+            }
+          }
         }
       }
+
+      .blog-content-side{
+        width: 100%;
+        height: 100%;
+        min-width: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: space-between;
+
+        .blog{
+          width: 100%;
+          height: 100%;
+          padding: 8px;
+        }
+        .blog-page-nav{
+          min-height: 100px;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+
+          .blog-page-nav-btn{
+            width: 40px;
+            height: 40px;
+            color: white;
+            border: 1px solid #555555;
+            outline: none;
+            padding: 5px;
+            margin-right: 10px;
+            border-radius: 5px;
+            background-color: transparent;
+            transition: background-color .3s ease-out;
+
+            &:hover{
+              background-color: #e27614;
+              border: 1px solid #e27614;
+            }
+          }
+          .blog-page-nav-btn.active{
+            background-color: #e27614;
+            border: 1px solid #e27614;
+          }
+        }
+      }
+
     }
 
     .sec-7{
