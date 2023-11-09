@@ -7,5 +7,15 @@ import {Component, ViewEncapsulation} from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class Blog1Component {
+  play = false;
 
+  playVideo() {
+    this.play = !this.play;
+    const iframe = document.querySelector('iframe');
+    if (this.play){
+      iframe!.style.display = 'block';
+    } else {
+      iframe!.style.display = 'none';
+    }
+  }
 }

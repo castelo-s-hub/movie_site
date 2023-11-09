@@ -37,11 +37,20 @@
 <div class="blog-item">
   <div class="blog-item-banner">
     <img src="./assets/images/blog/banner-2.jpg" alt="blog">
+
+    <div class="video-btn" (click)="playVideo()">
+      <i [ngClass]="play ? 'fa-pause-circle-o':'fa-play'" class="fa fa-play" aria-hidden="true"></i>
+    </div>
     <div class="img-cover">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/yfK5PRth85Y?si=8laMUpxUSKZuX-Vr"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
       <span>Holding</span>
       <span>March 8, 2023</span>
     </div>
   </div>
+
   <div class="blog-item-details">
     <div class="d-flex align-items-center justify-content-center">
       <div class="blogger">
@@ -108,10 +117,28 @@
 
 <div class="blog-item">
   <div class="blog-item-banner">
-    <img src="./assets/images/blog/banner-4.jpg" alt="blog">
+    <div id="carouselExample" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./assets/images/blog/banner-3.jpg" class="d-block w-100" alt="blog">
+        </div>
+        <div class="carousel-item">
+          <img src="./assets/images/blog/banner-4.jpg" class="d-block w-100" alt="blog">
+        </div>
+      </div>
+    </div>
     <div class="img-cover">
       <span>Holding</span>
       <span>March 8, 2023</span>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true" style="border: none!important;"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true" style="border: none!important;"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
   </div>
   <div class="blog-item-details">
