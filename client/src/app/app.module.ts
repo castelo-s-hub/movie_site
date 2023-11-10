@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSidenavModule} from "@angular/material/sidenav";
 import { BlogComponent } from './components/blog/blog.component';
 import { Blog1Component } from './components/blog/blog1/blog1.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { Blog1Component } from './components/blog/blog1/blog1.component';
     HomeComponent,
     AboutComponent,
     BlogComponent,
-    Blog1Component
+    Blog1Component,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
