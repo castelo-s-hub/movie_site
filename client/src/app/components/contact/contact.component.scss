@@ -326,6 +326,94 @@
     .main-wrapper{
       margin: 6vw 0;
 
+      .sec-1{
+        width: 100%;
+        min-height: 250px;
+
+        .v-hr{
+          width: 1px;
+          min-height: 250px;
+          height: 100%;
+          background-color: #4c5a73;
+        }
+
+        .sec-1-cont{
+          width: 100%;
+          padding: 25px;
+          i{
+            color: #e27614;
+            font-size: 50px;
+            margin-bottom: 30px;
+          }
+
+          span a{
+            text-decoration: none;
+            color: #fff;
+            transition: color .3s ease-out;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+
+            &:hover{
+              color: #e27614;
+            }
+          }
+        }
+
+      }
+
+      .sec-2{
+        margin: max(50px, 6vw) 0;
+        h6, .title-1{
+          text-align: center!important;
+        }
+
+        h6{
+          color: #e27614!important;
+        }
+      }
+
+      .sec-3{
+        .row{
+          .col-12{
+            .text-input, .text-area{
+              width: 100%;
+              min-height: 50px;
+              border-radius: 0;
+              outline: none;
+              border: 1px solid transparent;
+              margin-bottom: 16px;
+              padding: 16px 32px;
+              background-color: rgba(255, 255, 255, 0.0500000007);
+              color: white;
+
+              &::placeholder{
+                color: white;
+              }
+              &:focus{
+                border: 1px solid #e27614;
+              }
+            }
+          }
+        }
+        .contact-button{
+          background-color: #e27614;
+          color: #fff;
+          transition: background-color .3s ease-out;
+          outline: none;
+          border: 2px solid #e27614;
+          padding: 16px 40px;
+          border-radius: 8px;
+          cursor: pointer;
+          font-size: 16px;
+          font-weight: 600;
+
+          &:hover{
+            background-color: transparent;
+          }
+        }
+      }
     }
 
     .sec-7{
