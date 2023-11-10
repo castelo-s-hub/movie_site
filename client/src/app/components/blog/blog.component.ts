@@ -1,6 +1,4 @@
-import {ChangeDetectorRef, Component, ElementRef, HostListener, Renderer2, ViewEncapsulation} from '@angular/core';
-import {DomSanitizer} from "@angular/platform-browser";
-import VanillaTilt from "vanilla-tilt";
+import {Component, ViewEncapsulation} from '@angular/core';
 
 @Component({
   selector: 'app-blog',
@@ -12,7 +10,7 @@ export class BlogComponent {
 
   isMenuOpen: boolean = false;
 
-  constructor(private sanitizer: DomSanitizer, private cdr: ChangeDetectorRef, private elementRef: ElementRef, private renderer: Renderer2) {
+  constructor() {
   }
 
   ngOnInit() {
