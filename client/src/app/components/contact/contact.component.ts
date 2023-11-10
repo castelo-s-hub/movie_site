@@ -1,16 +1,16 @@
-import {ChangeDetectorRef, Component, ElementRef, Renderer2} from '@angular/core';
-import {DomSanitizer} from "@angular/platform-browser";
+import {Component, ViewEncapsulation} from '@angular/core';
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss']
+  styleUrls: ['./contact.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class ContactComponent {
 
   isMenuOpen: boolean = false;
 
-  constructor(private sanitizer: DomSanitizer, private cdr: ChangeDetectorRef, private elementRef: ElementRef, private renderer: Renderer2) {
+  constructor() {
   }
 
   ngOnInit() {
