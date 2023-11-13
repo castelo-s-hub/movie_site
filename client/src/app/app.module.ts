@@ -10,6 +10,7 @@ import {MatSidenavModule} from "@angular/material/sidenav";
 import { BlogComponent } from './components/blog/blog.component';
 import { Blog1Component } from './components/blog/blog1/blog1.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { BlogDetComponent } from './components/blog/blog-det/blog-det.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ContactComponent } from './components/contact/contact.component';
     AboutComponent,
     BlogComponent,
     Blog1Component,
-    ContactComponent
+    ContactComponent,
+    BlogDetComponent
   ],
   imports: [
     BrowserModule,
