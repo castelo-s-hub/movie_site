@@ -1,0 +1,56 @@
+.container{
+  span{
+    color: #fff;
+  }
+  .cat-name{
+    color: #fff;
+    background-color: #e27614;
+    padding: 10px 20px;
+    margin-right: 20px;
+  }
+
+  img{
+    width: 100%;
+    margin: 30px 0;
+  }
+
+  i{
+    color: #e27614;
+    font-size: 20px;
+    margin-right: 8px;
+  }
+  h6{
+    color: #fff;
+    font-size: 14px;
+    margin: 0 30px 0 0;
+    font-weight: 400!important;
+  }
+
+  .quote{
+    width: 100%;
+    padding: 40px 60px;
+    background-color: #1d2943;
+    background-image: url("../../../../assets/images/blog/quote.png");
+    background-repeat: no-repeat;
+    background-position: 15px 15px;
+    min-height: 100px;
+    margin: 30px 0;
+
+    .p-2{
+      color: #fff;
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+    .hr-40{
+      width: 40px;
+      height: 2px;
+      background-color: #e27614;
+      margin-right: 8px;
+    }
+  }
+
+  h3{
+    margin: 50px 0;
+  }
+}
