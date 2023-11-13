@@ -10,7 +10,11 @@ import {MatSidenavModule} from "@angular/material/sidenav";
 import { BlogComponent } from './components/blog/blog.component';
 import { Blog1Component } from './components/blog/blog1/blog1.component';
 import { ContactComponent } from './components/contact/contact.component';
+<<<<<<< HEAD
 import { BlogDetComponent } from './components/blog/blog-det/blog-det.component';
+=======
+import { BlogDetailsComponent } from './components/blog/blog-details/blog-details.component';
+>>>>>>> master
 
 @NgModule({
   declarations: [
@@ -20,7 +24,11 @@ import { BlogDetComponent } from './components/blog/blog-det/blog-det.component'
     BlogComponent,
     Blog1Component,
     ContactComponent,
+<<<<<<< HEAD
     BlogDetComponent
+=======
+    BlogDetailsComponent
+>>>>>>> master
   ],
   imports: [
     BrowserModule,
