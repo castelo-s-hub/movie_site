@@ -704,8 +704,9 @@ nav {
         width: 100%;
         position: absolute;
         background-color: #333;
-        top: 50px;
+        top: 100px;
         left: 0;
+        z-index: 10;
         a {
           padding: 15px;
           width: 100%;
