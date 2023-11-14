@@ -53,4 +53,72 @@
   h3{
     margin: 50px 0;
   }
+
+  .cat-row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+
+    a{
+      color: white;
+      text-decoration: none;
+      transition: .3s ease-in-out;
+
+      &:hover{
+        text-decoration: #e27614 underline;
+      }
+    }
+  }
+
+  .comment-section{
+    margin: 40px 0;
+    padding: 3vw 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    .comment-wrapper{
+      position: relative;
+      padding: 25px;
+      width: 100%;
+      border: 2px solid #555;
+      margin-bottom: 20px;
+
+      img{
+        width: 60px;
+        height: 60px;
+        margin: 0 20px 0 0;
+      }
+
+      h6{
+        margin-bottom: 12px;
+      }
+
+      &:last-child{
+        margin-bottom: 0;
+      }
+      &:nth-child(2){
+        width: 90%;
+      }
+    }
+
+    .btn-reply{
+      position: absolute;
+      right: 25px;
+      top: 25px;
+      background-color: #e27614;
+      color: white;
+      border: 2px solid #e27614;
+      outline: none;
+      border-radius: 20px;
+      padding: 10px 20px;
+      transition: background-color .3s ease-out;
+
+      &:hover{
+        background-color: transparent;
+      }
+    }
+  }
 }
