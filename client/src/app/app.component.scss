@@ -25,7 +25,6 @@ nav {
   line-height: 50px;
   position: fixed;
   width: 100%;
-  z-index: 1000;
 
   .container {
     display: flex;
@@ -84,6 +83,7 @@ nav {
 
       &.open {
         display: flex;
+        z-index: 10!important;
       }
     }
 
@@ -230,8 +230,9 @@ footer{
         width: 100%;
         position: absolute;
         background-color: #333;
-        top: 50px;
+        top: 100px;
         left: 0;
+        z-index: 10!important;
         a {
           padding: 15px;
           width: 100%;

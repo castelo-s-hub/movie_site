@@ -106,6 +106,10 @@ export class HomeComponent implements OnInit{
       this.popupVideo = false;
       this.cdr.detectChanges();
     }
+    if (!target.matches(".bar")) {
+      this.isMenuOpen = false;
+      this.cdr.detectChanges();
+    }
   }
 
   startCounter(): void {

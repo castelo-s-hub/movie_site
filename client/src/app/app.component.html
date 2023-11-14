@@ -1,14 +1,14 @@
 <nav [ngClass]="{'slideDown': isScrolled, 'slideUp': !isScrolled}">
   <div class="container">
     <div class="logo">
-      <img src="./assets/images/logo.png" alt="logo">
+      <img src="./assets/images/logo.png" alt="logo" routerLink="/home">
     </div>
     <button class="hamburger" (click)="toggleMenu()">
       <div class="bar"></div>
       <div class="bar"></div>
       <div class="bar"></div>
     </button>
-    <div class="nav-items" [class.open]="isMenuOpen">
+    <div class="nav-items" [class.open]="isMenuOpen" [ngStyle]="{'z-index':isMenuOpen?'10':'0'}">
       <a routerLink="/">Home</a>
       <a routerLink="/about">About Us</a>
       <a routerLink="/services">Pages</a>
