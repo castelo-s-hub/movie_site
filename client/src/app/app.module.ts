@@ -11,6 +11,7 @@ import { BlogComponent } from './components/blog/blog.component';
 import { Blog1Component } from './components/blog/blog1/blog1.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { BlogDetComponent } from './components/blog/blog-det/blog-det.component';
+import { ServiceComponent } from './components/pages/service/service.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { BlogDetComponent } from './components/blog/blog-det/blog-det.component'
     Blog1Component,
     ContactComponent,
     BlogDetComponent,
+    ServiceComponent,
   ],
   imports: [
     BrowserModule,
