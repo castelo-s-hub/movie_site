@@ -1,20 +1,16 @@
-import {ChangeDetectorRef, Component, HostListener, ViewEncapsulation} from '@angular/core';
+import {ChangeDetectorRef, Component, HostListener} from '@angular/core';
 
 @Component({
-  selector: 'app-contact',
-  templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  selector: 'app-service',
+  templateUrl: './service.component.html',
+  styleUrls: ['./service.component.scss']
 })
-export class ContactComponent {
+export class ServiceComponent {
 
   isMenuOpen: boolean = false;
   isPagesTabOpen: boolean = false;
 
   constructor(private cdr: ChangeDetectorRef) {
-  }
-
-  ngOnInit() {
   }
 
   @HostListener('document:click', ['$event'])
@@ -25,6 +21,9 @@ export class ContactComponent {
       this.isPagesTabOpen = false;
       this.cdr.detectChanges();
     }
+  }
+
+  ngOnInit() {
   }
 
   toggleMenu(): void {

@@ -136,24 +136,6 @@ nav {
       }
     }
 
-    .pages-list{
-      display: none;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      width: 180px;
-      min-height: 250px;
-      background-color: #1d2943;
-      position: absolute;
-      top: 100px;
-      left: calc(50% - 90px);
-      padding: 15px;
-      z-index: 10;
-    }
-    .pages-list.active{
-      display: flex;
-    }
-
   }
 }
 
