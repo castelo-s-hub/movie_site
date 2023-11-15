@@ -30,9 +30,15 @@
     <div class="nav-items" [class.open]="isMenuOpen">
       <a routerLink="/">Home</a>
       <a routerLink="/about">About Us</a>
-      <a routerLink="/pages">Pages &blacktriangledown;</a>
+      <a (click)="pagesTabOpen()" style="cursor: pointer">Pages &blacktriangledown;</a>
       <a routerLink="/blog">Blog</a>
       <a routerLink="/contact">Contact</a>
+    </div>
+    <div class="pages-list" [class.active]="isPagesTabOpen">
+      <a routerLink="/">Service</a>
+      <a routerLink="/about">Project</a>
+      <a routerLink="/blog">Team</a>
+      <a routerLink="/contact">Faq</a>
     </div>
     <div class="d-none d-md-block">
       <button class="nav-button">

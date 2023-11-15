@@ -18,6 +18,7 @@ import {DomSanitizer, SafeResourceUrl} from "@angular/platform-browser";
 })
 export class HomeComponent implements OnInit{
   isMenuOpen: boolean = false;
+  isPagesTabOpen: boolean = false;
   counter: number = 0;
   sec3animation: boolean = true;
   sec2counter: number = 300;
@@ -110,6 +111,10 @@ export class HomeComponent implements OnInit{
       this.isMenuOpen = false;
       this.cdr.detectChanges();
     }
+    if (!target.matches("a")) {
+      this.isPagesTabOpen = false;
+      this.cdr.detectChanges();
+    }
   }
 
   startCounter(): void {
@@ -124,6 +129,10 @@ export class HomeComponent implements OnInit{
 
   toggleMenu(): void {
     this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  pagesTabOpen() {
+    this.isPagesTabOpen = !this.isPagesTabOpen;
   }
 
   vanillaTiltAnimation() {
