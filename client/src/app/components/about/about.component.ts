@@ -11,6 +11,7 @@ import {DomSanitizer} from "@angular/platform-browser";
 export class AboutComponent {
 
   isMenuOpen: boolean = false;
+  isPagesTabOpen: boolean = false;
   counter: number = 0;
   counter1: number = 0;
   counter2: number = 0;
@@ -79,8 +80,22 @@ export class AboutComponent {
     }
   }
 
+  @HostListener('document:click', ['$event'])
+  onClick(event: Event): void {
+    let target = event.target as HTMLElement;
+
+    if (!target.matches("a")) {
+      this.isPagesTabOpen = false;
+      this.cdr.detectChanges();
+    }
+  }
+
   toggleMenu(): void {
     this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  pagesTabOpen() {
+    this.isPagesTabOpen = !this.isPagesTabOpen;
   }
 
   startCounter(): void {

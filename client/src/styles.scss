@@ -242,7 +242,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     width: 30%;
     height: 100vh;
     background-color: #1b2335!important;
-    z-index: 9999;
+    z-index: 9!important;
     position: fixed;
     overflow: hidden;
 
@@ -555,5 +555,27 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     }
   }
 }
+
+// navbar
+nav{
+  .pages-list{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    min-height: 250px;
+    background-color: #1d2943;
+    position: absolute;
+    top: 100px;
+    left: calc(50% - 90px);
+    padding: 15px;
+    z-index: 10;
+  }
+  .pages-list.active{
+    display: flex;
+  }
+}
+// navbar
 // public scss for every component
 

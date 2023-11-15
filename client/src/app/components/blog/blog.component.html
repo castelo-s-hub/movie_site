@@ -55,7 +55,7 @@
           <hr>
           <span routerLink="/about">About</span>
           <hr>
-          <span routerLink="/pages">Pages</span>
+          <span (click)="pagesTabOpen()">Pages</span>
           <hr>
           <span routerLink="/blog">Blog</span>
           <hr>
@@ -135,9 +135,15 @@
                 <div class="nav-items" [class.open]="isMenuOpen">
                   <a routerLink="/">Home</a>
                   <a routerLink="/about">About Us</a>
-                  <a routerLink="/pages">Pages &blacktriangledown;</a>
+                  <a (click)="pagesTabOpen()" style="cursor: pointer">Pages</a>
                   <a routerLink="/blog">Blog</a>
                   <a routerLink="/contact">Contact</a>
+                </div>
+                <div class="pages-list" [class.active]="isPagesTabOpen">
+                  <a routerLink="/service">Service</a>
+                  <a routerLink="/project">Project</a>
+                  <a routerLink="/team">Team</a>
+                  <a routerLink="/faq">Faq</a>
                 </div>
                 <div>
                   <button class="nav-toggle-button" (click)="drawer.toggle()">
