@@ -10,6 +10,7 @@ export class AppComponent {
   title = 'client';
   isScrolled: boolean = false;
   isMenuOpen: boolean = false;
+  isPagesTabOpen: boolean = false;
 
   constructor(private sanitizer: DomSanitizer, private cdr: ChangeDetectorRef, private elementRef: ElementRef, private renderer: Renderer2) {
   }
@@ -30,9 +31,17 @@ export class AppComponent {
       this.isMenuOpen = false;
       this.cdr.detectChanges();
     }
+    if (!target.matches("a")) {
+      this.isPagesTabOpen = false;
+      this.cdr.detectChanges();
+    }
   }
 
   toggleMenu(): void {
     this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  pagesTabOpen() {
+    this.isPagesTabOpen = !this.isPagesTabOpen;
   }
 }
