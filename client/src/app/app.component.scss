@@ -25,6 +25,7 @@ nav {
   line-height: 50px;
   position: fixed;
   width: 100%;
+  z-index: 20;
 
   .container {
     display: flex;
