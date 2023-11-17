@@ -1,0 +1,34 @@
+.col-12, .col-md-6{
+  margin-bottom: 35px;
+}
+.img-wrapper{
+  width: 100%;
+  height: 330px;
+  border-radius: 8px;
+  overflow: hidden;
+
+  img{
+    width: 100%;
+    height: 100%;
+    transition: .3s ease-in-out;
+
+    &:hover{
+      cursor: pointer;
+      transform: scale(1.05);
+    }
+  }
+}
+
+.title{
+  margin: 20px 0;
+
+  h2{
+    margin: 0 0 0 15px;
+    transition: color .3s ease-out;
+
+    &:hover{
+      color: #e27614!important;
+      cursor: pointer;
+    }
+  }
+}
