@@ -7,12 +7,17 @@ import {Blog1Component} from "./components/blog/blog1/blog1.component";
 import {ContactComponent} from "./components/contact/contact.component";
 import {BlogDetComponent} from "./components/blog/blog-det/blog-det.component";
 import {ServiceComponent} from "./components/pages/service/service.component";
+import {ServiceMainComponent} from "./components/pages/service/service-main/service-main.component";
+import {ServiceDet1Component} from "./components/pages/service/service-det1/service-det1.component";
 
 const routes: Routes = [
   { path:'', redirectTo:'/home', pathMatch:'full'},
   { path:'home', component: HomeComponent },
   { path:'about', component: AboutComponent },
-  { path:'service', component: ServiceComponent },
+  { path:'service', component: ServiceComponent, children: [
+    { path:'', component: ServiceMainComponent },
+    { path:'1', component: ServiceDet1Component },
+  ]},
   { path:'blog', component: BlogComponent, children: [
     { path:'', component: Blog1Component },
     { path:'1', component: BlogDetComponent },
