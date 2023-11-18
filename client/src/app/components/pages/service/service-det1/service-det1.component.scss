@@ -77,6 +77,31 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
+  padding: 0 15px;
 
+  img{
+    width: 100%;
+    margin-bottom: 30px;
+  }
 
+  .quote{
+    width: 100%;
+    min-height: 200px;
+    background-color: #1b2234;
+    padding: 25px 40px;
+    margin: 25px 0;
+
+    img{
+      width: auto;
+    }
+
+    h3{
+      width: 100%;
+      span{
+        font-size: 18px;
+        font-weight: lighter;
+        color: #4c5a73;
+      }
+    }
+  }
 }
