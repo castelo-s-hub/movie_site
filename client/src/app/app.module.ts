@@ -14,6 +14,9 @@ import { BlogDetComponent } from './components/blog/blog-det/blog-det.component'
 import { ServiceComponent } from './components/pages/service/service.component';
 import { ServiceMainComponent } from './components/pages/service/service-main/service-main.component';
 import { ServiceDet1Component } from './components/pages/service/service-det1/service-det1.component';
+import { ProjectsComponent } from './components/pages/projects/projects.component';
+import { ProjectsMainComponent } from './components/pages/projects/projects-main/projects-main.component';
+import { ProjectsDet1Component } from './components/pages/projects/projects-det1/projects-det1.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +30,9 @@ import { ServiceDet1Component } from './components/pages/service/service-det1/se
     ServiceComponent,
     ServiceMainComponent,
     ServiceDet1Component,
+    ProjectsComponent,
+    ProjectsMainComponent,
+    ProjectsDet1Component,
   ],
   imports: [
     BrowserModule,
