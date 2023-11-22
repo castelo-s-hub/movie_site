@@ -1,3 +1,11 @@
+@keyframes fadeText {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
 .project-page-content{
   width: 100%;
   .container-1{
@@ -182,6 +190,45 @@
         position: absolute;
         top: 20px;
         right: 20px;
+      }
+    }
+  }
+
+  .btn-1{
+    border: 1px solid #e27614;
+    padding: 10px 25px;
+    color: white;
+    background-color: transparent;
+    font-weight: 700;
+    outline: none;
+    margin-right: 10px;
+
+    @media screen and (max-width: 420px){
+      font-size: 14px;
+      padding: 5px 15px;
+    }
+  }
+  .btn-1.active{
+    background-color: #e27614;
+  }
+
+  .content-loader{
+    width: 100%;
+    padding: 40px 35px 35px 20px;
+    background-color: #1b2234;
+    margin-bottom: 20px;
+
+    .content{
+      animation: fadeText 1s ease-out;
+      li{
+        font-size: 24px;
+        font-weight: 600;
+        color: white;
+        margin-bottom: 15px;
+        list-style: url("../../../../../assets/images/list-ico.png");
+      }
+      p{
+        margin-bottom: 25px;
       }
     }
   }

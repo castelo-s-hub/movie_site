@@ -49,6 +49,62 @@
         </div>
       </div>
 
+      <div class="d-flex d-align-items-center">
+        <button class="btn-1" [ngClass]="challenge?'active':''" (click)="clickChallenge()">Challenge</button>
+        <button class="btn-1" [ngClass]="solution?'active':''" (click)="clickSolution()">Solution</button>
+        <button class="btn-1" [ngClass]="result?'active':''" (click)="clickResult()">Result</button>
+      </div>
+      <div class="content-loader">
+        <div *ngIf="challenge" class="content">
+          <ul>
+            <li>A picture is worth of standard and like Your New Cars Perform ance and</li>
+            <p class="p-1">Aliquam eros justo, posuere loborti viverra laoreet matti ullamcorper posuere viverra .Aliquam eros
+              justo, posuere lobortis, viverra laoreet augue mattis fermentum ullamcorper viverra laoreet Aliquam eros
+              justo, posuere loborti viverra laoreet matti ullamcorper posuere viverra .Aliquam.</p>
+            <li>Once Upon A Time: Using Story Structure For Better</li>
+            <p class="p-1">Aliquam eros justo, posuere loborti viverra laoreet matti ullamcorper posuere viverra .Aliquam eros
+              justo, posuere lobortis, viverra laoreet augue mattis fermentum ullamcorper viverra laoreet Aliquam eros
+              justo, posuere loborti viverra laoreet matti ullamcorper posuere viverra .Aliquam.</p>
+            <li>Movie Poster Designs To Inspire Your PWA Hero Images</li>
+            <p class="p-1">Aliquam eros justo, posuere loborti viverra laoreet matti ullamcorper posuere viverra .Aliquam eros
+              justo, posuere lobortis, viverra laoreet augue mattis fermentum ullamcorper viverra laoreet Aliquam eros
+              justo, posuere loborti viverra laoreet matti ullamcorper posuere viverra .Aliquam.</p>
+          </ul>
+        </div>
+        <div *ngIf="solution" class="content">
+          <ul>
+            <li>Once Upon A Time: Using Story Structure For Better</li>
+            <p class="p-1">Aliquam eros justo, posuere loborti viverra laoreet matti ullamcorper posuere viverra .Aliquam eros
+              justo, posuere lobortis, viverra laoreet augue mattis fermentum ullamcorper viverra laoreet Aliquam eros
+              justo, posuere loborti viverra laoreet matti ullamcorper posuere viverra .Aliquam.</p>
+            <li>Movie Poster Designs To Inspire Your PWA Hero Images</li>
+            <p class="p-1">Aliquam eros justo, posuere loborti viverra laoreet matti ullamcorper posuere viverra .Aliquam eros
+              justo, posuere lobortis, viverra laoreet augue mattis fermentum ullamcorper viverra laoreet Aliquam eros
+              justo, posuere loborti viverra laoreet matti ullamcorper posuere viverra .Aliquam.</p>
+            <li>A picture is worth of standard and like Your New Cars Perform ance and</li>
+            <p class="p-1">Aliquam eros justo, posuere loborti viverra laoreet matti ullamcorper posuere viverra .Aliquam eros
+              justo, posuere lobortis, viverra laoreet augue mattis fermentum ullamcorper viverra laoreet Aliquam eros
+              justo, posuere loborti viverra laoreet matti ullamcorper posuere viverra .Aliquam.</p>
+          </ul>
+        </div>
+        <div *ngIf="result" class="content">
+          <ul>
+            <li>Movie Poster Designs To Inspire Your PWA Hero Images</li>
+            <p class="p-1">Aliquam eros justo, posuere loborti viverra laoreet matti ullamcorper posuere viverra .Aliquam eros
+              justo, posuere lobortis, viverra laoreet augue mattis fermentum ullamcorper viverra laoreet Aliquam eros
+              justo, posuere loborti viverra laoreet matti ullamcorper posuere viverra .Aliquam.</p>
+            <li>A picture is worth of standard and like Your New Cars Perform ance and</li>
+            <p class="p-1">Aliquam eros justo, posuere loborti viverra laoreet matti ullamcorper posuere viverra .Aliquam eros
+              justo, posuere lobortis, viverra laoreet augue mattis fermentum ullamcorper viverra laoreet Aliquam eros
+              justo, posuere loborti viverra laoreet matti ullamcorper posuere viverra .Aliquam.</p>
+            <li>Once Upon A Time: Using Story Structure For Better</li>
+            <p class="p-1">Aliquam eros justo, posuere loborti viverra laoreet matti ullamcorper posuere viverra .Aliquam eros
+              justo, posuere lobortis, viverra laoreet augue mattis fermentum ullamcorper viverra laoreet Aliquam eros
+              justo, posuere loborti viverra laoreet matti ullamcorper posuere viverra .Aliquam.</p>
+          </ul>
+        </div>
+      </div>
+
     </div>
     <div class="project-page-content">
       <div class="container-1">
