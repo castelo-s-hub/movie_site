@@ -1,0 +1,36 @@
+.left-side{
+  width: 100%;
+  height: 100%;
+  background-color: #1b2235;
+
+  img{
+    width: 100%;
+  }
+
+  .profile-desc{
+    padding: 20px;
+
+    .p-1{
+      margin-bottom: 2px;
+      font-size: 16px;
+    }
+
+    progress {
+      border-radius: 7px;
+      width: 100%;
+      height: 3px;
+      margin-bottom: 20px;
+    }
+    progress::-webkit-progress-bar {
+      background-color: white;
+      border-radius: 0;
+    }
+    progress::-webkit-progress-value {
+      background-color: #e27614;
+      border-radius: 0;
+    }
+    progress::-moz-progress-bar {
+      /* style rules */
+    }
+  }
+}
