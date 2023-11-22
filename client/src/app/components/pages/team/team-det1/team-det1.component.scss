@@ -69,4 +69,25 @@
       }
     }
   }
+
+  input, textarea{
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: transparent;
+    border: 1px solid #555;
+    border-radius: 5px;
+    color: white;
+
+    &:focus{
+      outline: none;
+      border: 1px solid #e27614;
+    }
+    &::placeholder{
+      color: white;
+    }
+  }
+  input{
+    height: 55px;
+  }
 }
