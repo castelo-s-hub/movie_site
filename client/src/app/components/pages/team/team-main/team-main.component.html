@@ -1,1 +1,24 @@
-<p>team-main works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-sm-6 col-md-4" *ngFor="let data of cardList" style="margin-bottom: 20px">
+      <div class="card-shadow">
+        <div class="card" routerLink="1">
+          <img src="{{data.img}}" class="card-img-top" alt="{{data.name}}">
+          <div class="card-body">
+            <button class="social-btn">
+              <a href="{{data.fb}}"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            </button>
+            <button class="social-btn">
+              <a href="{{data.tw}}"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            </button>
+            <button class="social-btn">
+              <a href="{{data.inst}}"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            </button>
+          </div>
+        </div>
+      </div>
+      <h3>{{data.name}}</h3>
+      <span>{{data.post}}</span>
+    </div>
+  </div>
+</div>
