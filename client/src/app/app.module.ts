@@ -17,6 +17,9 @@ import { ServiceDet1Component } from './components/pages/service/service-det1/se
 import { ProjectsComponent } from './components/pages/projects/projects.component';
 import { ProjectsMainComponent } from './components/pages/projects/projects-main/projects-main.component';
 import { ProjectsDet1Component } from './components/pages/projects/projects-det1/projects-det1.component';
+import { TeamComponent } from './components/pages/team/team.component';
+import { TeamMainComponent } from './components/pages/team/team-main/team-main.component';
+import { TeamDet1Component } from './components/pages/team/team-det1/team-det1.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +36,9 @@ import { ProjectsDet1Component } from './components/pages/projects/projects-det1
     ProjectsComponent,
     ProjectsMainComponent,
     ProjectsDet1Component,
+    TeamComponent,
+    TeamMainComponent,
+    TeamDet1Component,
   ],
   imports: [
     BrowserModule,

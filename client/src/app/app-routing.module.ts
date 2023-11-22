@@ -12,6 +12,9 @@ import {ServiceDet1Component} from "./components/pages/service/service-det1/serv
 import {ProjectsComponent} from "./components/pages/projects/projects.component";
 import {ProjectsMainComponent} from "./components/pages/projects/projects-main/projects-main.component";
 import {ProjectsDet1Component} from "./components/pages/projects/projects-det1/projects-det1.component";
+import {TeamComponent} from "./components/pages/team/team.component";
+import {TeamMainComponent} from "./components/pages/team/team-main/team-main.component";
+import {TeamDet1Component} from "./components/pages/team/team-det1/team-det1.component";
 
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -33,6 +36,12 @@ const routes: Routes = [
     path: 'project', component: ProjectsComponent, children: [
       {path: '', component: ProjectsMainComponent},
       {path: '1', component: ProjectsDet1Component},
+    ]
+  },
+  {
+    path: 'team', component: TeamComponent, children: [
+      {path: '', component: TeamMainComponent},
+      {path: '1', component: TeamDet1Component},
     ]
   },
   {path: 'contact', component: ContactComponent}
