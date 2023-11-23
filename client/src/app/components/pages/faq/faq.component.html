@@ -1,0 +1,307 @@
+<mat-drawer-container class="about-drawer-container">
+
+  <mat-drawer #drawer mode="over" position="end">
+    <div class="about-mat-drawer">
+      <div class="d-flex align-items-center justify-content-between w-100">
+        <img src="./assets/images/logo.png" alt="logo">
+        <button (click)="drawer.toggle()" class="close-btn">
+          <pre class="close-icon">&plus;</pre>
+        </button>
+      </div>
+
+      <div class="d-none d-md-block">
+        <p class="p-1" style="margin: 30px 0">
+          The design readable content of a page hen looking at its layout The point our of using Movie template
+        </p>
+
+        <h4>Gallery</h4>
+        <div class="gallery">
+          <div class="row">
+            <div class="col-4">
+              <img src="https://template.wphix.com/dhora-prv/dhora/assets/img/play/project/img-6.jpg" alt="img-6">
+            </div>
+            <div class="col-4">
+              <img src="https://template.wphix.com/dhora-prv/dhora/assets/img/play/project/img-7.jpg" alt="img-7">
+            </div>
+            <div class="col-4">
+              <img src="https://template.wphix.com/dhora-prv/dhora/assets/img/play/project/img-8.jpg" alt="img-8">
+            </div>
+            <div class="col-4">
+              <img src="https://template.wphix.com/dhora-prv/dhora/assets/img/play/project/img-9.jpg" alt="img-9">
+            </div>
+            <div class="col-4">
+              <img src="https://template.wphix.com/dhora-prv/dhora/assets/img/play/project/img-10.jpg" alt="img-10">
+            </div>
+            <div class="col-4">
+              <img src="https://template.wphix.com/dhora-prv/dhora/assets/img/play/project/img-11.jpg" alt="img-11">
+            </div>
+            <div class="col-4">
+              <img src="https://template.wphix.com/dhora-prv/dhora/assets/img/play/project/img-12.jpg" alt="img-12">
+            </div>
+            <div class="col-4">
+              <img src="https://template.wphix.com/dhora-prv/dhora/assets/img/play/project/img-13.jpg" alt="img-13">
+            </div>
+            <div class="col-4">
+              <img src="https://template.wphix.com/dhora-prv/dhora/assets/img/play/project/img-14.jpg" alt="img-14">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-block d-md-none">
+        <div class="d-flex flex-column align-items-start justify-content-center"
+             style="margin: 40px 0; padding: 0 25px;">
+          <span routerLink="/home">Home</span>
+          <hr>
+          <span routerLink="/about">About</span>
+          <hr>
+          <span (click)="pagesTabOpen()">Pages</span>
+          <hr>
+          <span routerLink="/blog">Blog</span>
+          <hr>
+          <span routerLink="/contact">Contact</span>
+          <hr>
+        </div>
+      </div>
+
+      <h4>Contacts</h4>
+      <div class="d-flex flex-column align-items-start justify-content-center">
+        <div class="d-flex align-items-center justify-content-center">
+          <i class="fa fa-map-marker" aria-hidden="true"></i>
+          <span>6123 Los angles, 1922</span>
+        </div>
+        <div class="d-flex align-items-start justify-content-center">
+          <i class="fa fa-envelope" aria-hidden="true"></i>
+          <span><a href="mailto:info@example.com">info@example.com</a></span>
+        </div>
+        <div class="d-flex align-items-start justify-content-center">
+          <i class="fa fa-phone" aria-hidden="true"></i>
+          <span><a href="tel:(629) 555-0129">(629) 555-0129</a></span>
+        </div>
+      </div>
+
+      <div class="d-flex align-items-center">
+        <button class="social-btn">
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+        </button>
+        <button class="social-btn">
+          <i class="fa fa-twitter" aria-hidden="true"></i>
+        </button>
+        <button class="social-btn">
+          <i class="fa fa-instagram" aria-hidden="true"></i>
+        </button>
+        <button class="social-btn">
+          <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </mat-drawer>
+
+  <mat-drawer-content>
+    <div class="top-bar">
+      <div class="container">
+        <div class="d-flex flex-column align-items-center justify-content-between w-100">
+          <div class="top-bar-content">
+            <div class="d-flex align-items-center justify-content-between w-100">
+              <div class="d-flex align-items-center">
+                <div class="d-flex align-items-center top-bar-item">
+                  <i class="fa fa-envelope" aria-hidden="true"></i>
+                  <span><a href="mailto:info@example.com">info@example.com</a></span>
+                </div>
+                <div class="d-flex align-items-center top-bar-item">
+                  <i class="fa fa-map-marker" aria-hidden="true"></i>
+                  <span>6123 Los angles, 1922</span>
+                </div>
+                <div class="d-flex align-items-center top-bar-item">
+                  <i class="fa fa-phone" aria-hidden="true"></i>
+                  <span><a href="tel:(629) 555-0129">(629) 555-0129</a></span>
+                </div>
+              </div>
+
+              <div class="d-flex-align-items-center justify-content-between top-bar-social">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+                <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+              </div>
+            </div>
+          </div>
+          <div class="nav-bar">
+            <nav>
+              <div class="container">
+                <div class="logo">
+                  <img src="./assets/images/logo.png" alt="logo">
+                </div>
+                <div class="nav-items" [class.open]="isMenuOpen">
+                  <a routerLink="/">Home</a>
+                  <a routerLink="/about">About Us</a>
+                  <a (click)="pagesTabOpen()" style="cursor: pointer">Pages</a>
+                  <a routerLink="/blog">Blog</a>
+                  <a routerLink="/contact">Contact</a>
+                </div>
+                <div class="pages-list" [class.active]="isPagesTabOpen">
+                  <a routerLink="/service">Service</a>
+                  <a routerLink="/project">Project</a>
+                  <a routerLink="/team">Team</a>
+                  <a routerLink="/faq">Faq</a>
+                </div>
+                <div>
+                  <button class="nav-toggle-button" (click)="drawer.toggle()">
+                    <div class="toggle-line-1"></div>
+                    <div class="toggle-line-2"></div>
+                  </button>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-banner">
+      <div class="container">
+        <div class="d-sm-flex align-items-center justify-content-between">
+          <div class="title-1">FAQ</div>
+          <div class="d-flex align-items-center" style="height: auto!important;">
+            <pre routerLink="/home">Home</pre>&nbsp; > &nbsp;<span>FAQ</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-sm-6 col-md-8">
+            <div class="left-side">
+              <div class="subtitle-2">Popular question</div>
+              <h1 class="title-1">Frequently asked question</h1>
+              <mat-accordion>
+                <mat-expansion-panel (opened)="panelOpenState = true"
+                                     (closed)="panelOpenState = false"
+                                     expanded>
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      Stand and rate the to popular is not simply ?
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <p>It is a long established fact that a reader will distro bioiiy desig the re dablea content of a
+                    page whenlayout this is Thoiie point of using.It is a long this established fact.Aliquam ero justo,
+                    posuere loborti viverra laoreet matti ullamcorper posuere viverra .Aliquam eros</p>
+                </mat-expansion-panel>
+
+                <mat-expansion-panel (opened)="panelOpenState = true"
+                                     (closed)="panelOpenState = false">
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      We stall live Contrary to popular is not simply ?
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <p>It is a long established fact that a reader will distro bioiiy desig the re dablea content of a
+                    page whenlayout this is Thoiie point of using.It is a long this established fact.Aliquam ero justo,
+                    posuere loborti viverra laoreet matti ullamcorper posuere viverra .Aliquam eros</p>
+                </mat-expansion-panel>
+
+                <mat-expansion-panel (opened)="panelOpenState = true"
+                                     (closed)="panelOpenState = false">
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      Lorem Ipsum simply print that was print ingantype ?
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <p>It is a long established fact that a reader will distro bioiiy desig the re dablea content of a
+                    page whenlayout this is Thoiie point of using.It is a long this established fact.Aliquam ero justo,
+                    posuere loborti viverra laoreet matti ullamcorper posuere viverra .Aliquam eros</p>
+                </mat-expansion-panel>
+
+                <mat-expansion-panel (opened)="panelOpenState = true"
+                                     (closed)="panelOpenState = false">
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      You are ready to our roofing service creating level hand?
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <p>It is a long established fact that a reader will distro bioiiy desig the re dablea content of a
+                    page whenlayout this is Thoiie point of using.It is a long this established fact.Aliquam ero justo,
+                    posuere loborti viverra laoreet matti ullamcorper posuere viverra .Aliquam eros</p>
+                </mat-expansion-panel>
+
+                <mat-expansion-panel (opened)="panelOpenState = true"
+                                     (closed)="panelOpenState = false">
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      We stall live Contrary to popular is not simply ?
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <p>It is a long established fact that a reader will distro bioiiy desig the re dablea content of a
+                    page whenlayout this is Thoiie point of using.It is a long this established fact.Aliquam ero justo,
+                    posuere loborti viverra laoreet matti ullamcorper posuere viverra .Aliquam eros</p>
+                </mat-expansion-panel>
+
+                <mat-expansion-panel (opened)="panelOpenState = true"
+                                     (closed)="panelOpenState = false">
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      Lorem Ipsum simply print that was print ingantype ?
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <p>It is a long established fact that a reader will distro bioiiy desig the re dablea content of a
+                    page whenlayout this is Thoiie point of using.It is a long this established fact.Aliquam ero justo,
+                    posuere loborti viverra laoreet matti ullamcorper posuere viverra .Aliquam eros</p>
+                </mat-expansion-panel>
+              </mat-accordion>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4">
+            <div class="right-side">
+              <h3>Contact us now for project.</h3>
+              <div class="d-flex" style="margin-bottom: 20px">
+                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                <div>
+                  <h5>Time schedule</h5>
+                  <p class="p-1">Monday - Friday 8:00 - 9:00</p>
+                  <p class="p-1">Monday - Friday 10:00 - 9:00</p>
+                </div>
+              </div>
+              <div class="d-flex" style="margin-bottom: 20px">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <div>
+                  <h5>Location</h5>
+                  <p class="p-1">Dhaka 102, utl 1216, road 45 stert linehouse of street</p>
+                </div>
+              </div>
+              <div class="d-flex">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <div>
+                  <h5>Call us</h5>
+                  <p class="p-1">Mobile: 0000 - 000 - 000 00</p>
+                  <p class="p-1">Hotline: 1234 - 000 - 000</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sec-7">
+      <div class="sec-7-cover"></div>
+      <div class="sec-7-image"></div>
+      <div class="container">
+        <div class="d-md-flex align-items-center justify-content-between">
+          <div class="d-flex align-items-center">
+            <div class="d-flex-align-items-center-justify-content-center call-icon">
+              <img width="64" height="64"
+                   src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/external-call-office-and-office-supplies-flaticons-lineal-color-flat-icons-3.png"
+                   alt="external-call-office-and-office-supplies-flaticons-lineal-color-flat-icons-3"/>
+            </div>
+            <div>Get a consultation Call Us &nbsp;<span style="white-space: nowrap;">+123 456 789</span></div>
+          </div>
+
+          <button class="contact-button">Contact Us</button>
+        </div>
+      </div>
+    </div>
+
+  </mat-drawer-content>
+</mat-drawer-container>

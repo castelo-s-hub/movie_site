@@ -20,6 +20,8 @@ import { ProjectsDet1Component } from './components/pages/projects/projects-det1
 import { TeamComponent } from './components/pages/team/team.component';
 import { TeamMainComponent } from './components/pages/team/team-main/team-main.component';
 import { TeamDet1Component } from './components/pages/team/team-det1/team-det1.component';
+import { FaqComponent } from './components/pages/faq/faq.component';
+import {MatExpansionModule} from "@angular/material/expansion";
 
 @NgModule({
   declarations: [
@@ -39,12 +41,14 @@ import { TeamDet1Component } from './components/pages/team/team-det1/team-det1.c
     TeamComponent,
     TeamMainComponent,
     TeamDet1Component,
+    FaqComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatExpansionModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
