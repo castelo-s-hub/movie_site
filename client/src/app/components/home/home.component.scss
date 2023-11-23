@@ -154,48 +154,48 @@ nav {
   outline: #e27614;
 }
 
-//.sec-1{
-//  height: 100vh;
-//  position: relative;
-//
-//  .sec-1-image{
-//    width: 65%;
-//    height: 100vh;
-//    overflow: hidden;
-//    position: absolute;
-//    right: 0;
-//    top: 0;
-//  }
-//
-//  .sec-1-cont{
-//    height: 100vh;
-//    display: flex;
-//    align-items: center;
-//    justify-content: center;
-//    width: 52%;
-//    position: absolute;
-//    left: 4vw;
-//    z-index: 5;
-//
-//    .sec-1-text{
-//      color: white;
-//      font-size: max(10vw, 100px);
-//      line-height: 120px;
-//      text-align: center;
-//    }
-//
-//    .sec-1-text-2{
-//      color: white;
-//      font-size: max(5vw, 40px);
-//      line-height: 50px;
-//    }
-//
-//    p{
-//      color: white;
-//      margin: 15px 0;
-//    }
-//  }
-//}
+.home-sec-1{
+  height: 100vh;
+  position: relative;
+
+  .home-sec-1-image{
+    width: 65%;
+    height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .home-sec-1-cont{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52%;
+    position: absolute;
+    left: 4vw;
+    z-index: 5;
+
+    .home-sec-1-text{
+      color: white;
+      font-size: max(10vw, 100px);
+      line-height: 120px;
+      text-align: center;
+    }
+
+    .home-sec-1-text-2{
+      color: white;
+      font-size: max(5vw, 40px);
+      line-height: 50px;
+    }
+
+    p{
+      color: white;
+      margin: 15px 0;
+    }
+  }
+}
 
 .sec-2{
   margin: 5vw 0;
@@ -287,7 +287,7 @@ nav {
   }
 }
 
-.sec-4{
+.home-sec-4{
   margin: 5vw 0;
   display: flex;
   align-items: center;
@@ -299,16 +299,16 @@ nav {
   background-size: cover;
   background-repeat: no-repeat;
 
-  .sec-4-cont{
+  .home-sec-4-cont{
     color: white;
   }
 }
 
-.sec-5{
+.home-sec-5{
   margin: 3vw 0;
   position: relative;
 
-  .div-5-cont-1{
+  .home-div-5-cont-1{
     min-width: 50%;
     flex: 1;
     padding: 15px;
@@ -320,7 +320,7 @@ nav {
       width: 100%;
     }
 
-    .popup-video{
+    .home-popup-video{
       position: absolute;
       top: calc(50% - 63px);
       left: calc(50% - 63px);
@@ -344,7 +344,7 @@ nav {
       }
     }
   }
-  .div-5-cont-1:hover{
+  .home-div-5-cont-1:hover{
     .popup-video{
       .play-btn{
         svg{
@@ -367,93 +367,93 @@ nav {
   }
 }
 
-//.sec-6{
-//  margin: 5vw 0;
-//
-//  .sec-6-cont{
-//    button {
-//      margin-top: 10px;
-//      margin-bottom: 20px;
-//      margin-right: 20px;
-//      background-color: #e27614;
-//      color: white;
-//      border: 2px solid #e27614;
-//      outline: none;
-//      border-radius: 100%;
-//      width: 58px;
-//      height: 58px;
-//      transition: background-color .3s ease-out;
-//    }
-//    button:hover{
-//      background-color: transparent;
-//      color: #e27614;
-//    }
-//
-//    .card-btn{
-//      color: white;
-//      text-decoration: none;
-//      font-weight: 600;
-//      display: flex;
-//      transition: color .3s ease-out;
-//    }
-//    .card-btn:hover{
-//      color: #e27614;
-//      .arrow{
-//        animation: arrowMove .5s ease-in-out;
-//      }
-//    }
-//
-//    .arrow{
-//      margin-left: 7px;
-//      margin-top: 2px;
-//      width: 30px;
-//      transition: color .3s ease-out;
-//    }
-//  }
-//  .carousel-container {
-//    width: 100%;
-//    overflow: hidden;
-//    position: relative;
-//
-//    .carousel {
-//      width: 1400px;
-//      display: flex;
-//      align-items: center;
-//      justify-content: space-between;
-//      transition: transform 0.3s ease-in-out;
-//
-//      .carouselItem {
-//        width: 350px;
-//        margin: 0 15px;
-//        overflow: hidden;
-//
-//        img{
-//          width: 100%;
-//        }
-//        img:hover{
-//          cursor: pointer;
-//          transform: scale(1.05);
-//          -webkit-transform: scale(1.05);
-//          -ms-transform: scale(1.05);
-//
-//          transition: transform .3s ease-in-out;
-//        }
-//
-//        h6,h3{
-//          color: white;
-//          transition: color .3s ease-out;
-//        }
-//        h6{
-//          margin: 15px 0;
-//        }
-//        h3:hover{
-//          color: #e27614!important;
-//          cursor: pointer;
-//        }
-//      }
-//    }
-//  }
-//}
+.home-sec-6{
+  margin: 5vw 0;
+
+  .home-sec-6-cont{
+    button {
+      margin-top: 10px;
+      margin-bottom: 20px;
+      margin-right: 20px;
+      background-color: #e27614;
+      color: white;
+      border: 2px solid #e27614;
+      outline: none;
+      border-radius: 100%;
+      width: 58px;
+      height: 58px;
+      transition: background-color .3s ease-out;
+    }
+    button:hover{
+      background-color: transparent;
+      color: #e27614;
+    }
+
+    .card-btn{
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      display: flex;
+      transition: color .3s ease-out;
+    }
+    .card-btn:hover{
+      color: #e27614;
+      .arrow{
+        animation: arrowMove .5s ease-in-out;
+      }
+    }
+
+    .arrow{
+      margin-left: 7px;
+      margin-top: 2px;
+      width: 30px;
+      transition: color .3s ease-out;
+    }
+  }
+  .carousel-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    .carousel {
+      width: 1400px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: transform 0.3s ease-in-out;
+
+      .carouselItem {
+        width: 350px;
+        margin: 0 15px;
+        overflow: hidden;
+
+        img{
+          width: 100%;
+        }
+        img:hover{
+          cursor: pointer;
+          transform: scale(1.05);
+          -webkit-transform: scale(1.05);
+          -ms-transform: scale(1.05);
+
+          transition: transform .3s ease-in-out;
+        }
+
+        h6,h3{
+          color: white;
+          transition: color .3s ease-out;
+        }
+        h6{
+          margin: 15px 0;
+        }
+        h3:hover{
+          color: #e27614!important;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
 
 .sec-7{
   margin: 2vw 0;
@@ -463,10 +463,10 @@ nav {
   }
 }
 
-.sec-8{
+.home-sec-8{
   margin: 5vw 0;
 
-  .container{
+  .sec-8-container{
     width: 100%;
     overflow: auto;
     scroll-behavior: smooth;
@@ -478,46 +478,46 @@ nav {
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    padding-bottom: 3.5vw;
+    padding-bottom: 1.5vw;
 
     .carousel-container2 {
       overflow: hidden;
-    }
 
-    .carousel {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      transition: transform 0.3s ease-in-out;
-    }
+      .home-carousel {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition: transform 0.3s ease-in-out;
 
-    .carouselItem {
-      margin-right: 60px;
-      /* Other styles for carousel items */
-      img{
-        width: 100%;
-        pointer-events: none;
-      }
+        .carouselItem {
+          margin-right: 60px;
 
-      h3{
-        color: white;
-        text-align: center;
-        margin-top: 20px;
+          img{
+            width: 100%;
+            pointer-events: none;
+          }
+
+          h3{
+            color: white;
+            text-align: center;
+            margin-top: 20px;
+          }
+        }
       }
     }
   }
 
-  .container::-webkit-scrollbar {
+  .sec-8-container::-webkit-scrollbar {
     height: 8px;
   }
-  .container::-webkit-scrollbar-track {
+  .sec-8-container::-webkit-scrollbar-track {
     background-color: #0f172a;
   }
-  .container::-webkit-scrollbar-thumb {
+  .sec-8-container::-webkit-scrollbar-thumb {
     background-color: #e27614;
     border-radius: 3px;
   }
-  .container::-webkit-scrollbar-button{
+  .sec-8-container::-webkit-scrollbar-button{
     display: none;
   }
 }

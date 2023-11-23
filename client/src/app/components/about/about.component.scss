@@ -137,7 +137,7 @@
   }
 }
 
-.sec-5{
+.about-sec-5{
   margin: 5vw 0;
   background-image: url("../../../assets/images/about/sec-5-bg.png");
   background-size: cover;
@@ -145,21 +145,22 @@
   background-repeat: no-repeat;
   padding-top: 50px;
 
-  .container{
+  .sec-5-container{
     width: 100%;
+    height: auto;
     overflow: auto;
-    scroll-behavior: smooth;
-    scroll-snap-type: x mandatory;
-    -ms-overflow-style: none;
-    -webkit-overflow-scrolling: touch;
+    //scroll-behavior: smooth;
+    //scroll-snap-type: x mandatory;
+    //-ms-overflow-style: none;
+    //-webkit-overflow-scrolling: touch;
     position: relative;
     z-index: 2;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+    //-webkit-user-select: none;
+    //-ms-user-select: none;
+    //user-select: none;
     padding-bottom: 3.5vw;
 
-    .carousel-container {
+    .about-carousel-container {
       overflow: hidden;
     }
 
@@ -214,17 +215,17 @@
     }
   }
 
-  .container::-webkit-scrollbar {
+  .sec-5-container::-webkit-scrollbar {
     height: 8px;
   }
-  .container::-webkit-scrollbar-track {
+  .sec-5-container::-webkit-scrollbar-track {
     background-color: #0f172a;
   }
-  .container::-webkit-scrollbar-thumb {
+  .sec-5-container::-webkit-scrollbar-thumb {
     background-color: #e27614;
     border-radius: 3px;
   }
-  .container::-webkit-scrollbar-button{
+  .sec-5-container::-webkit-scrollbar-button{
     display: none;
   }
 

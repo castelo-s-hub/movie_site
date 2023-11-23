@@ -129,7 +129,7 @@ export class HomeComponent implements OnInit{
 
   vanillaTiltAnimation() {
     const element = document.querySelector('.sec-3-image') as HTMLElement;
-    const element2 = document.querySelectorAll('.div-5-cont-1');
+    const element2 = document.querySelectorAll('.home-div-5-cont-1');
     const element3 = document.querySelector('.sec-9-image-vanilla') as HTMLElement;
     const element4 = document.querySelectorAll('.sec-8-image');
 

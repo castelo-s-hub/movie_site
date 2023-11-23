@@ -62,7 +62,7 @@ export class AboutComponent {
     this.vanillaTiltAnimation()
 
     const totalWidth = this.carouselItems.length * (this.itemWidth + this.margin);
-    const carousal = document.querySelector('.carousel-container') as HTMLElement;
+    const carousal = document.querySelector('.about-carousel-container') as HTMLElement;
     carousal.style.width = totalWidth + 'px';
   }
 
