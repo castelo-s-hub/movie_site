@@ -1,14 +1,16 @@
-import {ChangeDetectorRef, Component, HostListener} from '@angular/core';
+import {ChangeDetectorRef, Component, HostListener, ViewEncapsulation} from '@angular/core';
 
 @Component({
   selector: 'app-faq',
   templateUrl: './faq.component.html',
-  styleUrls: ['./faq.component.scss']
+  styleUrls: ['./faq.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class FaqComponent {
 
   isMenuOpen: boolean = false;
   isPagesTabOpen: boolean = false;
+  panelOpenState = false;
 
   constructor(private cdr: ChangeDetectorRef) {
   }
