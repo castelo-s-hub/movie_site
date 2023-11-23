@@ -16,6 +16,7 @@ import {TeamComponent} from "./components/pages/team/team.component";
 import {TeamMainComponent} from "./components/pages/team/team-main/team-main.component";
 import {TeamDet1Component} from "./components/pages/team/team-det1/team-det1.component";
 import {FaqComponent} from "./components/pages/faq/faq.component";
+import {NotFoundComponent} from "./components/not-found/not-found.component";
 
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -46,7 +47,8 @@ const routes: Routes = [
     ]
   },
   {path: 'faq', component: FaqComponent},
-  {path: 'contact', component: ContactComponent}
+  {path: 'contact', component: ContactComponent},
+  {path: '**', component: NotFoundComponent}
 ];
 
 @NgModule({
