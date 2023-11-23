@@ -1,6 +1,6 @@
 <nav [ngClass]="{'slideDown': isScrolled, 'slideUp': !isScrolled}">
   <div class="container">
-    <div class="logo">
+    <div class="logo" routerLink="/">
       <img src="./assets/images/logo.png" alt="logo" routerLink="/home">
     </div>
     <button class="hamburger" (click)="toggleMenu()">
@@ -22,7 +22,7 @@
       <a routerLink="/faq">Faq</a>
     </div>
     <div class="d-none d-md-block">
-      <button class="nav-button">
+      <button class="nav-button" routerLink="/contact">
         Get a quote &bkarow;
       </button>
     </div>

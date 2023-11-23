@@ -12,6 +12,7 @@
 body{
   font-family: 'Source Code Pro', monospace!important;
   background-color: #0f172a;
+  overflow-x: hidden;
 
   h1, h2, h3, h4, h5, h6{
     font-family: 'Source Code Pro', monospace!important;
@@ -93,6 +94,22 @@ body{
 
 .p-1{
   color: white;
+}
+
+.nav-button{
+  min-height: 50px;
+  border: 2px solid #e27614;
+  outline: none;
+  padding: 5px 30px;
+  border-radius: 8px;
+  background-color: #e27614;
+  color: white;
+  transition: background-color .3s ease-out;
+}
+
+.nav-button:hover{
+  background-color: transparent;
+  outline: #e27614;
 }
 
 html, body { height: 100%; }
@@ -374,22 +391,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   }
 
   mat-drawer-content {
-
-    .nav-button{
-      min-height: 50px;
-      border: 2px solid #e27614;
-      outline: none;
-      padding: 5px 30px;
-      border-radius: 8px;
-      background-color: #e27614;
-      color: white;
-      transition: background-color .3s ease-out;
-    }
-
-    .nav-button:hover{
-      background-color: transparent;
-      outline: #e27614;
-    }
 
     .main-banner{
       width: 100%;

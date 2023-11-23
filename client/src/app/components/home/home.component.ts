@@ -1,12 +1,4 @@
-import {
-  ChangeDetectorRef,
-  Component,
-  ElementRef,
-  HostListener,
-  OnInit,
-  Renderer2,
-  ViewEncapsulation
-} from '@angular/core';
+import { ChangeDetectorRef, Component, ElementRef, HostListener, OnInit, Renderer2, ViewEncapsulation } from '@angular/core';
 import VanillaTilt from 'vanilla-tilt';
 import {DomSanitizer, SafeResourceUrl} from "@angular/platform-browser";
 
