@@ -129,7 +129,7 @@
           <div class="nav-bar">
             <nav>
               <div class="container">
-                <div class="logo">
+                <div class="logo" routerLink="/">
                   <img src="./assets/images/logo.png" alt="logo">
                 </div>
                 <div class="nav-items" [class.open]="isMenuOpen">
@@ -182,7 +182,7 @@
             <p class="p-1">It is a long established fact that a reader will distracted by the readable content of a page
               hen
               looking at its layout.The point of using Lorem Ipsum</p>
-            <button class="nav-button" style="min-height: 50px">
+            <button class="nav-button" style="min-height: 50px" routerLink="/about">
               Learn More
             </button>
           </div>
@@ -283,22 +283,24 @@
       </div>
     </div>
 
-    <div class="sec-5">
+    <div class="about-sec-5">
       <div class="container">
-        <div class="carousel-container"
-             (mousedown)="onMouseDown($event)"
-             (document:mouseup)="onMouseUp()"
-             (document:mousemove)="onMouseMove($event)">
-          <div class="carousel"
-               [style.transform]="'translateX(-' + currentIndex * (itemWidth + margin) + 'px)'">
-            <div *ngFor="let item of carouselItems" class="carouselItem">
-              <div class="sec-5-image">
-                <img src="{{item.image}}" alt="{{item.title}}">
-                <div class="sec-5-image-hover">
-                  <div class="container" style="height: 100%;">
-                    <div class="d-flex flex-column align-items-start justify-content-end" style="height: 100%">
-                      <span>{{item.tag}}</span>
-                      <h4>{{item.title}}</h4>
+        <div class="sec-5-container">
+          <div class="about-carousel-container"
+               (mousedown)="onMouseDown($event)"
+               (document:mouseup)="onMouseUp()"
+               (document:mousemove)="onMouseMove($event)">
+            <div class="carousel"  routerLink="/project/1"
+                 [style.transform]="'translateX(-' + currentIndex * (itemWidth + margin) + 'px)'">
+              <div *ngFor="let item of carouselItems" class="carouselItem">
+                <div class="sec-5-image">
+                  <img src="{{item.image}}" alt="{{item.title}}">
+                  <div class="sec-5-image-hover">
+                    <div class="container" style="height: 100%;">
+                      <div class="d-flex flex-column align-items-start justify-content-end" style="height: 100%">
+                        <span>{{item.tag}}</span>
+                        <h4>{{item.title}}</h4>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -329,7 +331,7 @@
               It is a long established fact that a reader will distracted by the readable content of a page hen looking
               at its layout.The point of using Lorem Ipsum
             </p>
-            <button class="nav-button">Load More</button>
+            <button class="nav-button" routerLink="/about">Load More</button>
           </div>
         </div>
       </div>

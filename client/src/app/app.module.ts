@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -23,6 +23,7 @@ import { TeamDet1Component } from './components/pages/team/team-det1/team-det1.c
 import { FaqComponent } from './components/pages/faq/faq.component';
 import {MatExpansionModule} from "@angular/material/expansion";
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import {HTTP_INTERCEPTORS} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     MatExpansionModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
