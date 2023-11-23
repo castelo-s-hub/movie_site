@@ -22,6 +22,7 @@ import { TeamMainComponent } from './components/pages/team/team-main/team-main.c
 import { TeamDet1Component } from './components/pages/team/team-det1/team-det1.component';
 import { FaqComponent } from './components/pages/faq/faq.component';
 import {MatExpansionModule} from "@angular/material/expansion";
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import {MatExpansionModule} from "@angular/material/expansion";
     TeamMainComponent,
     TeamDet1Component,
     FaqComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,
